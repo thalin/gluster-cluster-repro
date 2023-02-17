@@ -81,8 +81,40 @@ sys	0m0.231s
 
 Cool.
 
+## Clean up after yourself
+Ok so we made a bit of a mess here. We have at least 45 volumes that we probably don't want to keep long term, plus some VMs that are wasting CPU cycles. Let's clean up after ourselves.
+
+### TEAR IT DOWN, TEAR IT ALL DOWN!
+Along side the setup playbooks, I included a couple of handy teardown playbooks as well to help you dispose of your unwanted volumes. Conveniently, virt-lightning will get rid of the VMs for us once we're done with the volumes.
+
+Technically, you don't _need_ to do this step, but it makes me feel better so here it is:
+```
+$ ansible-playbook -i inventory gluster-teardown.yml
+```
+
+This unmounts the volume, destroys the volume, and unmounts the bricks.
+
+Next, let's get rid of those volumes:
+```
+$ ansible-playbook -i inventory virt-teardown.yml
+```
+
+This playbook detaches all the volumes from the VMs and then deletes them. This will work without destroying the gluster volume, above, but it makes me uncomfortable to do it that way so I don't usually.
+
+Finally, we can get rid of the VMs:
+
+```
+$ vl down
+🗑 purging gluster-client-1
+🗑 purging gluster-server-1
+🗑 purging gluster-server-3
+🗑 purging gluster-server-2
+```
+
+Ok. We're all cleaned up.
+
 # In conclusion
 
-This is pretty slow on some pretty nice machines. It's even slower on my little VM host with VMs which have 1/16 the ram & 1/64 the CPUs. I guess this is no surprise.
+This is pretty slow on some pretty nice machines. It's even slower on my little VM host with VMs which have 1/16 the ram & 1/64 the CPUs of the production machines. I guess this is no surprise.
 
 Also, I'm including some output requested in the ticket (logs, straces, etc) in the `output` directory.
