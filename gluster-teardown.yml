@@ -13,7 +13,7 @@
   vars:
     gluster_volume: test-volume
   tasks:
-    - name: Create {{ gluster_volume }}
+    - name: Remove {{ gluster_volume }}
       gluster_volume:
         name: "{{ gluster_volume }}"
         state: absent
