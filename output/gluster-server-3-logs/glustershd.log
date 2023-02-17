@@ -1,0 +1,1403 @@
+[2023-02-17 23:39:51.384615 +0000] I [MSGID: 100030] [glusterfsd.c:2767:main] 0-/usr/sbin/glusterfs: Started running version [{arg=/usr/sbin/glusterfs}, {version=10.1}, {cmdlinestr=/usr/sbin/glusterfs -s localhost --volfile-id shd/test-volume -p /var/run/gluster/shd/test-volume/test-volume-shd.pid -l /var/log/glusterfs/glustershd.log -S /var/run/gluster/68b05cf6292b0269.socket --xlator-option *replicate*.node-uuid=4ed3138b-baff-4fa7-b8f1-17555e0f5d37 --process-name glustershd --client-pid=-6}] 
+[2023-02-17 23:39:51.385048 +0000] I [glusterfsd.c:2447:daemonize] 0-glusterfs: Pid of current running process is 6183
+[2023-02-17 23:39:51.388381 +0000] I [socket.c:915:__socket_server_bind] 0-socket.glusterfsd: closing (AF_UNIX) reuse check socket 9
+[2023-02-17 23:39:51.389274 +0000] I [MSGID: 101190] [event-epoll.c:667:event_dispatch_epoll_worker] 0-epoll: Started thread with index [{index=0}] 
+[2023-02-17 23:39:51.389432 +0000] I [MSGID: 101190] [event-epoll.c:667:event_dispatch_epoll_worker] 0-epoll: Started thread with index [{index=1}] 
+[2023-02-17 23:39:52.384382 +0000] I [glusterfsd-mgmt.c:2203:mgmt_getspec_cbk] 0-glusterfs: Received list of available volfile servers: gluster-server-1:24007 gluster-server-2:24007 
+[2023-02-17 23:39:52.387735 +0000] I [io-stats.c:3701:ios_sample_buf_size_configure] 0-test-volume: Configure ios_sample_buf  size is 1024 because ios_sample_interval is 0
+[2023-02-17 23:39:52.387877 +0000] I [MSGID: 122068] [ec-code.c:1051:ec_code_detect] 0-test-volume-disperse-14: Using 'avx' CPU extensions 
+[2023-02-17 23:39:52.388869 +0000] I [MSGID: 122068] [ec-code.c:1051:ec_code_detect] 0-test-volume-disperse-13: Using 'avx' CPU extensions 
+[2023-02-17 23:39:52.389869 +0000] I [MSGID: 122068] [ec-code.c:1051:ec_code_detect] 0-test-volume-disperse-12: Using 'avx' CPU extensions 
+[2023-02-17 23:39:52.390635 +0000] I [MSGID: 122068] [ec-code.c:1051:ec_code_detect] 0-test-volume-disperse-11: Using 'avx' CPU extensions 
+[2023-02-17 23:39:52.391588 +0000] I [MSGID: 122068] [ec-code.c:1051:ec_code_detect] 0-test-volume-disperse-10: Using 'avx' CPU extensions 
+[2023-02-17 23:39:52.392646 +0000] I [MSGID: 122068] [ec-code.c:1051:ec_code_detect] 0-test-volume-disperse-9: Using 'avx' CPU extensions 
+[2023-02-17 23:39:52.393503 +0000] I [MSGID: 122068] [ec-code.c:1051:ec_code_detect] 0-test-volume-disperse-8: Using 'avx' CPU extensions 
+[2023-02-17 23:39:52.395092 +0000] I [MSGID: 122068] [ec-code.c:1051:ec_code_detect] 0-test-volume-disperse-7: Using 'avx' CPU extensions 
+[2023-02-17 23:39:52.396551 +0000] I [MSGID: 122068] [ec-code.c:1051:ec_code_detect] 0-test-volume-disperse-6: Using 'avx' CPU extensions 
+[2023-02-17 23:39:52.397652 +0000] I [MSGID: 122068] [ec-code.c:1051:ec_code_detect] 0-test-volume-disperse-5: Using 'avx' CPU extensions 
+[2023-02-17 23:39:52.398843 +0000] I [MSGID: 122068] [ec-code.c:1051:ec_code_detect] 0-test-volume-disperse-4: Using 'avx' CPU extensions 
+[2023-02-17 23:39:52.400249 +0000] I [MSGID: 122068] [ec-code.c:1051:ec_code_detect] 0-test-volume-disperse-3: Using 'avx' CPU extensions 
+[2023-02-17 23:39:52.401027 +0000] I [MSGID: 122068] [ec-code.c:1051:ec_code_detect] 0-test-volume-disperse-2: Using 'avx' CPU extensions 
+[2023-02-17 23:39:52.402113 +0000] I [MSGID: 122068] [ec-code.c:1051:ec_code_detect] 0-test-volume-disperse-1: Using 'avx' CPU extensions 
+[2023-02-17 23:39:52.402965 +0000] I [MSGID: 122068] [ec-code.c:1051:ec_code_detect] 0-test-volume-disperse-0: Using 'avx' CPU extensions 
+[2023-02-17 23:39:52.408916 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-0: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.409240 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-1: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.409523 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-2: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.410150 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-3: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.410385 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-2: changing port to 52252 (from 0)
+[2023-02-17 23:39:52.410424 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-2: intentional socket shutdown(14)
+[2023-02-17 23:39:52.410816 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-1: changing port to 60154 (from 0)
+[2023-02-17 23:39:52.410862 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-1: intentional socket shutdown(13)
+[2023-02-17 23:39:52.410872 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-0: changing port to 49282 (from 0)
+[2023-02-17 23:39:52.410885 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-0: intentional socket shutdown(12)
+[2023-02-17 23:39:52.411789 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-2: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.412082 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-0: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.412172 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-1: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.412905 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-0: Connected, attached to remote volume [{conn-name=test-volume-client-0}, {remote_subvol=/gluster/brick1/test-volume}] 
+[2023-02-17 23:39:52.413035 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-2: Connected, attached to remote volume [{conn-name=test-volume-client-2}, {remote_subvol=/gluster/brick1/test-volume}] 
+[2023-02-17 23:39:52.413362 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-4: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.413666 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-5: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.413833 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-1: Connected, attached to remote volume [{conn-name=test-volume-client-1}, {remote_subvol=/gluster/brick1/test-volume}] 
+[2023-02-17 23:39:52.413856 +0000] I [MSGID: 122062] [ec.c:336:ec_up] 0-test-volume-disperse-0: Going UP : Child UP = 111 Child Notify = 111 
+[2023-02-17 23:39:52.413979 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-6: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.414494 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-3: changing port to 60702 (from 0)
+[2023-02-17 23:39:52.414531 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-3: intentional socket shutdown(12)
+[2023-02-17 23:39:52.414922 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-4: changing port to 56536 (from 0)
+[2023-02-17 23:39:52.415008 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-4: intentional socket shutdown(16)
+[2023-02-17 23:39:52.415027 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-5: changing port to 60677 (from 0)
+[2023-02-17 23:39:52.415052 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-5: intentional socket shutdown(17)
+[2023-02-17 23:39:52.414927 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-7: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.415515 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-8: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.415749 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-3: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.416013 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-5: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.416210 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-4: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.416276 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-7: changing port to 60718 (from 0)
+[2023-02-17 23:39:52.416294 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-7: intentional socket shutdown(12)
+[2023-02-17 23:39:52.416527 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-6: changing port to 58873 (from 0)
+[2023-02-17 23:39:52.416559 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-6: intentional socket shutdown(18)
+[2023-02-17 23:39:52.416608 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-3: Connected, attached to remote volume [{conn-name=test-volume-client-3}, {remote_subvol=/gluster/brick2/test-volume}] 
+[2023-02-17 23:39:52.417699 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-6: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.417817 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-7: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.417875 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-4: Connected, attached to remote volume [{conn-name=test-volume-client-4}, {remote_subvol=/gluster/brick2/test-volume}] 
+[2023-02-17 23:39:52.418026 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-5: Connected, attached to remote volume [{conn-name=test-volume-client-5}, {remote_subvol=/gluster/brick2/test-volume}] 
+[2023-02-17 23:39:52.418045 +0000] I [MSGID: 122062] [ec.c:336:ec_up] 0-test-volume-disperse-1: Going UP : Child UP = 111 Child Notify = 111 
+[2023-02-17 23:39:52.418417 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-8: changing port to 52925 (from 0)
+[2023-02-17 23:39:52.418456 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-8: intentional socket shutdown(16)
+[2023-02-17 23:39:52.418845 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-6: Connected, attached to remote volume [{conn-name=test-volume-client-6}, {remote_subvol=/gluster/brick3/test-volume}] 
+[2023-02-17 23:39:52.418884 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-8: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.418940 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-9: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.419116 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-7: Connected, attached to remote volume [{conn-name=test-volume-client-7}, {remote_subvol=/gluster/brick3/test-volume}] 
+[2023-02-17 23:39:52.419230 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-10: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.419525 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-11: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.419923 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-8: Connected, attached to remote volume [{conn-name=test-volume-client-8}, {remote_subvol=/gluster/brick3/test-volume}] 
+[2023-02-17 23:39:52.419963 +0000] I [MSGID: 122062] [ec.c:336:ec_up] 0-test-volume-disperse-2: Going UP : Child UP = 111 Child Notify = 111 
+[2023-02-17 23:39:52.420432 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-9: changing port to 51722 (from 0)
+[2023-02-17 23:39:52.420478 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-9: intentional socket shutdown(16)
+[2023-02-17 23:39:52.421024 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-12: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.421118 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-11: changing port to 50040 (from 0)
+[2023-02-17 23:39:52.421136 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-11: intentional socket shutdown(16)
+[2023-02-17 23:39:52.421469 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-9: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.421528 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-10: changing port to 50020 (from 0)
+[2023-02-17 23:39:52.421544 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-10: intentional socket shutdown(22)
+[2023-02-17 23:39:52.421559 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-11: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.422255 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-10: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.422450 +0000] I [MSGID: 122002] [ec-heal.c:2623:ec_heal_do] 0-test-volume-disperse-0: Index entry needs to be purged for: 00000000-0000-0000-0000-000000000001  
+[2023-02-17 23:39:52.422695 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-11: Connected, attached to remote volume [{conn-name=test-volume-client-11}, {remote_subvol=/gluster/brick4/test-volume}] 
+[2023-02-17 23:39:52.422970 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-13: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.423268 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-14: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.423764 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-15: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.424001 +0000] I [MSGID: 122002] [ec-heal.c:2623:ec_heal_do] 0-test-volume-disperse-2: Index entry needs to be purged for: 00000000-0000-0000-0000-000000000001  
+[2023-02-17 23:39:52.424219 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-14: changing port to 56360 (from 0)
+[2023-02-17 23:39:52.424255 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-14: intentional socket shutdown(26)
+[2023-02-17 23:39:52.424909 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-13: changing port to 58258 (from 0)
+[2023-02-17 23:39:52.424950 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-13: intentional socket shutdown(25)
+[2023-02-17 23:39:52.424998 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-10: Connected, attached to remote volume [{conn-name=test-volume-client-10}, {remote_subvol=/gluster/brick4/test-volume}] 
+[2023-02-17 23:39:52.425608 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-14: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.425641 +0000] I [MSGID: 122002] [ec-heal.c:2623:ec_heal_do] 0-test-volume-disperse-1: Index entry needs to be purged for: 00000000-0000-0000-0000-000000000001  
+[2023-02-17 23:39:52.427512 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-9: Connected, attached to remote volume [{conn-name=test-volume-client-9}, {remote_subvol=/gluster/brick4/test-volume}] 
+[2023-02-17 23:39:52.427554 +0000] I [MSGID: 122062] [ec.c:336:ec_up] 0-test-volume-disperse-3: Going UP : Child UP = 111 Child Notify = 111 
+[2023-02-17 23:39:52.427853 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-13: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.427958 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-14: Connected, attached to remote volume [{conn-name=test-volume-client-14}, {remote_subvol=/gluster/brick5/test-volume}] 
+[2023-02-17 23:39:52.428094 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-12: changing port to 57508 (from 0)
+[2023-02-17 23:39:52.428123 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-12: intentional socket shutdown(22)
+[2023-02-17 23:39:52.428567 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-16: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.428930 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-17: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.429365 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-18: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.429601 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-19: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.431842 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-13: Connected, attached to remote volume [{conn-name=test-volume-client-13}, {remote_subvol=/gluster/brick5/test-volume}] 
+[2023-02-17 23:39:52.431969 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-20: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.432516 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-21: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.432768 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-22: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.432999 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-16: changing port to 51271 (from 0)
+[2023-02-17 23:39:52.433038 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-16: intentional socket shutdown(22)
+[2023-02-17 23:39:52.433793 +0000] I [MSGID: 122002] [ec-heal.c:2623:ec_heal_do] 0-test-volume-disperse-3: Index entry needs to be purged for: 00000000-0000-0000-0000-000000000001  
+[2023-02-17 23:39:52.433830 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-19: changing port to 53685 (from 0)
+[2023-02-17 23:39:52.434447 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-19: intentional socket shutdown(31)
+[2023-02-17 23:39:52.434478 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-17: changing port to 57198 (from 0)
+[2023-02-17 23:39:52.434507 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-17: intentional socket shutdown(29)
+[2023-02-17 23:39:52.434606 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-16: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.435393 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-12: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.435484 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-20: changing port to 53976 (from 0)
+[2023-02-17 23:39:52.435506 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-20: intentional socket shutdown(32)
+[2023-02-17 23:39:52.436304 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-16: Connected, attached to remote volume [{conn-name=test-volume-client-16}, {remote_subvol=/gluster/brick6/test-volume}] 
+[2023-02-17 23:39:52.436396 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-17: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.436614 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-21: changing port to 49307 (from 0)
+[2023-02-17 23:39:52.436643 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-21: intentional socket shutdown(33)
+[2023-02-17 23:39:52.436663 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-19: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.436712 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-15: changing port to 53056 (from 0)
+[2023-02-17 23:39:52.436724 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-15: intentional socket shutdown(27)
+[2023-02-17 23:39:52.436750 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-18: changing port to 52252 (from 0)
+[2023-02-17 23:39:52.436763 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-18: intentional socket shutdown(30)
+[2023-02-17 23:39:52.436813 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-20: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.439661 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-12: Connected, attached to remote volume [{conn-name=test-volume-client-12}, {remote_subvol=/gluster/brick5/test-volume}] 
+[2023-02-17 23:39:52.439702 +0000] I [MSGID: 122062] [ec.c:336:ec_up] 0-test-volume-disperse-4: Going UP : Child UP = 111 Child Notify = 111 
+[2023-02-17 23:39:52.441170 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-23: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.441589 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-24: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.441848 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-25: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.442471 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-26: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.442825 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-27: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.444346 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-28: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.445071 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-29: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.445382 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-30: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.446470 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-17: Connected, attached to remote volume [{conn-name=test-volume-client-17}, {remote_subvol=/gluster/brick6/test-volume}] 
+[2023-02-17 23:39:52.446697 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-19: Connected, attached to remote volume [{conn-name=test-volume-client-19}, {remote_subvol=/gluster/brick7/test-volume}] 
+[2023-02-17 23:39:52.447783 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-31: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.448371 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-32: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.448694 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-33: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.449179 +0000] I [MSGID: 122002] [ec-heal.c:2623:ec_heal_do] 0-test-volume-disperse-4: Index entry needs to be purged for: 00000000-0000-0000-0000-000000000001  
+[2023-02-17 23:39:52.449428 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-34: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.449654 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-20: Connected, attached to remote volume [{conn-name=test-volume-client-20}, {remote_subvol=/gluster/brick7/test-volume}] 
+[2023-02-17 23:39:52.449697 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-21: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.449732 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-35: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.449751 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-15: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.450138 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-36: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.450422 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-37: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.450860 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-38: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.451226 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-39: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.451275 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-18: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.451615 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-40: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.451839 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-41: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.452460 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-42: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.452628 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-43: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.453283 +0000] I [MSGID: 114020] [client.c:2336:notify] 0-test-volume-client-44: parent translators are ready, attempting connect on transport [] 
+[2023-02-17 23:39:52.453894 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-21: Connected, attached to remote volume [{conn-name=test-volume-client-21}, {remote_subvol=/gluster/brick8/test-volume}] 
+[2023-02-17 23:39:52.453939 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-15: Connected, attached to remote volume [{conn-name=test-volume-client-15}, {remote_subvol=/gluster/brick6/test-volume}] 
+[2023-02-17 23:39:52.453948 +0000] I [MSGID: 122062] [ec.c:336:ec_up] 0-test-volume-disperse-5: Going UP : Child UP = 111 Child Notify = 111 
+Final graph:
++------------------------------------------------------------------------------+
+  1: volume test-volume-client-0
+  2:     type protocol/client
+  3:     option opversion 100000
+  4:     option clnt-lk-version 1
+  5:     option volfile-checksum 0
+  6:     option volfile-key shd/test-volume
+  7:     option client-version 10.1
+  8:     option process-name glustershd
+  9:     option process-uuid CTX_ID:1e15b6ef-06bd-4807-99ba-97d27463e457-GRAPH_ID:0-PID:6183-HOST:gluster-server-3-PC_NAME:test-volume-client-0-RECON_NO:-0
+ 10:     option fops-version 1298437
+ 11:     option ping-timeout 42
+ 12:     option remote-host gluster-server-1
+ 13:     option remote-subvolume /gluster/brick1/test-volume
+ 14:     option transport-type socket
+ 15:     option transport.address-family inet
+ 16:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+ 17:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+ 18:     option transport.socket.ssl-enabled off
+ 19:     option transport.tcp-user-timeout 0
+ 20:     option transport.socket.keepalive-time 20
+ 21:     option transport.socket.keepalive-interval 2
+ 22:     option transport.socket.keepalive-count 9
+ 23:     option strict-locks off
+ 24: end-volume
+ 25:  
+ 26: volume test-volume-client-1
+ 27:     type protocol/client
+ 28:     option opversion 100000
+ 29:     option clnt-lk-version 1
+ 30:     option volfile-checksum 0
+ 31:     option volfile-key shd/test-volume
+ 32:     option client-version 10.1
+ 33:     option process-name glustershd
+ 34:     option process-uuid CTX_ID:1e15b6ef-06bd-4807-99ba-97d27463e457-GRAPH_ID:0-PID:6183-HOST:gluster-server-3-PC_NAME:test-volume-client-1-RECON_NO:-0
+ 35:     option fops-version 1298437
+ 36:     option ping-timeout 42
+ 37:     option remote-host gluster-server-2
+ 38:     option remote-subvolume /gluster/brick1/test-volume
+ 39:     option transport-type socket
+ 40:     option transport.address-family inet
+ 41:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+ 42:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+ 43:     option transport.socket.ssl-enabled off
+ 44:     option transport.tcp-user-timeout 0
+ 45:     option transport.socket.keepalive-time 20
+ 46:     option transport.socket.keepalive-interval 2
+ 47:     option transport.socket.keepalive-count 9
+ 48:     option strict-locks off
+ 49: end-volume
+ 50:  
+ 51: volume test-volume-client-2
+ 52:     type protocol/client
+ 53:     option opversion 100000
+ 54:     option clnt-lk-version 1
+ 55:     option volfile-checksum 0
+ 56:     option volfile-key shd/test-volume
+ 57:     option client-version 10.1
+ 58:     option process-name glustershd
+ 59:     option process-uuid CTX_ID:1e15b6ef-06bd-4807-99ba-97d27463e457-GRAPH_ID:0-PID:6183-HOST:gluster-server-3-PC_NAME:test-volume-client-2-RECON_NO:-0
+ 60:     option fops-version 1298437
+ 61:     option ping-timeout 42
+ 62:     option remote-host gluster-server-3
+ 63:     option remote-subvolume /gluster/brick1/test-volume
+ 64:     option transport-type socket
+ 65:     option transport.address-family inet
+ 66:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+ 67:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+ 68:     option transport.socket.ssl-enabled off
+ 69:     option transport.tcp-user-timeout 0
+ 70:     option transport.socket.keepalive-time 20
+ 71:     option transport.socket.keepalive-interval 2
+ 72:     option transport.socket.keepalive-count 9
+ 73:     option strict-locks off
+ 74: end-volume
+ 75:  
+ 76: volume test-volume-disperse-0
+ 77:     type cluster/disperse
+ 78:     option redundancy 1
+ 79:     option self-heal-daemon enable
+ 80:     option iam-self-heal-daemon yes
+ 81:     subvolumes test-volume-client-0 test-volume-client-1 test-volume-client-2
+ 82: end-volume
+ 83:  
+ 84: volume test-volume-client-3
+ 85:     type protocol/client
+ 86:     option opversion 100000
+ 87:     option clnt-lk-version 1
+ 88:     option volfile-checksum 0
+ 89:     option volfile-key shd/test-volume
+ 90:     option client-version 10.1
+ 91:     option process-name glustershd
+ 92:     option process-uuid CTX_ID:1e15b6ef-06bd-4807-99ba-97d27463e457-GRAPH_ID:0-PID:6183-HOST:gluster-server-3-PC_NAME:test-volume-client-3-RECON_NO:-0
+ 93:     option fops-version 1298437
+ 94:     option ping-timeout 42
+ 95:     option remote-host gluster-server-1
+ 96:     option remote-subvolume /gluster/brick2/test-volume
+ 97:     option transport-type socket
+ 98:     option transport.address-family inet
+ 99:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+100:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+101:     option transport.socket.ssl-enabled off
+102:     option transport.tcp-user-timeout 0
+103:     option transport.socket.keepalive-time 20
+104:     option transport.socket.keepalive-interval 2
+105:     option transport.socket.keepalive-count 9
+106:     option strict-locks off
+107: end-volume
+108:  
+109: volume test-volume-client-4
+110:     type protocol/client
+111:     option opversion 100000
+112:     option clnt-lk-version 1
+113:     option volfile-checksum 0
+114:     option volfile-key shd/test-volume
+115:     option client-version 10.1
+116:     option process-name glustershd
+117:     option process-uuid CTX_ID:1e15b6ef-06bd-4807-99ba-97d27463e457-GRAPH_ID:0-PID:6183-HOST:gluster-server-3-PC_NAME:test-volume-client-4-RECON_NO:-0
+118:     option fops-version 1298437
+119:     option ping-timeout 42
+120:     option remote-host gluster-server-2
+121:     option remote-subvolume /gluster/brick2/test-volume
+122:     option transport-type socket
+123:     option transport.address-family inet
+124:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+125:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+126:     option transport.socket.ssl-enabled off
+127:     option transport.tcp-user-timeout 0
+128:     option transport.socket.keepalive-time 20
+129:     option transport.socket.keepalive-interval 2
+130:     option transport.socket.keepalive-count 9
+131:     option strict-locks off
+132: end-volume
+133:  
+134: volume test-volume-client-5
+135:     type protocol/client
+136:     option opversion 100000
+137:     option clnt-lk-version 1
+138:     option volfile-checksum 0
+139:     option volfile-key shd/test-volume
+140:     option client-version 10.1
+141:     option process-name glustershd
+[2023-02-17 23:39:52.454687 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-22: changing port to 59107 (from 0)
+[2023-02-17 23:39:52.454744 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-22: intentional socket shutdown(34)
+142:     option process-uuid CTX_ID:1e15b6ef-06bd-4807-99ba-97d27463e457-GRAPH_ID:0-PID:6183-HOST:gluster-server-3-PC_NAME:test-volume-client-5-RECON_NO:-0
+143:     option fops-version 1298437
+144:     option ping-timeout 42
+145:     option remote-host gluster-server-3
+146:     option remote-subvolume /gluster/brick2/test-volume
+147:     option transport-type socket
+148:     option transport.address-family inet
+149:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+150:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+151:     option transport.socket.ssl-enabled off
+152:     option transport.tcp-user-timeout 0
+153:     option transport.socket.keepalive-time 20
+154:     option transport.socket.keepalive-interval 2
+155:     option transport.socket.keepalive-count 9
+156:     option strict-locks off
+157: end-volume
+158:  
+159: volume test-volume-disperse-1
+160:     type cluster/disperse
+[2023-02-17 23:39:52.454909 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-23: changing port to 50102 (from 0)
+161:     option redundancy 1
+162:     option self-heal-daemon enable
+163:     option iam-self-heal-daemon yes
+164:     subvolumes test-volume-client-3 test-volume-client-4 test-volume-client-5
+165: end-volume
+166:  
+167: volume test-volume-client-6
+168:     type protocol/client
+169:     option opversion 100000
+170:     option clnt-lk-version 1
+171:     option volfile-checksum 0
+172:     option volfile-key shd/test-volume
+173:     option client-version 10.1
+174:     option process-name glustershd
+175:     option process-uuid CTX_ID:1e15b6ef-06bd-4807-99ba-97d27463e457-GRAPH_ID:0-PID:6183-HOST:gluster-server-3-PC_NAME:test-volume-client-6-RECON_NO:-0
+176:     option fops-version 1298437
+177:     option ping-timeout 42
+178:     option remote-host gluster-server-1
+179:     option remote-subvolume /gluster/brick3/test-volume
+180:     option transport-type socket
+181:     option transport.address-family inet
+182:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+183:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+184:     option transport.socket.ssl-enabled off
+185:     option transport.tcp-user-timeout 0
+186:     option transport.socket.keepalive-time 20
+187:     option transport.socket.keepalive-interval 2
+188:     option transport.socket.keepalive-count 9
+189:     option strict-locks off
+190: end-volume
+191:  
+192: volume test-volume-client-7
+193:     type protocol/client
+194:     option opversion 100000
+[2023-02-17 23:39:52.454997 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-23: intentional socket shutdown(27)
+195:     option clnt-lk-version 1
+196:     option volfile-checksum 0
+197:     option volfile-key shd/test-volume
+198:     option client-version 10.1
+199:     option process-name glustershd
+[2023-02-17 23:39:52.455026 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-24: changing port to 55581 (from 0)
+200:     option process-uuid CTX_ID:1e15b6ef-06bd-4807-99ba-97d27463e457-GRAPH_ID:0-PID:6183-HOST:gluster-server-3-PC_NAME:test-volume-client-7-RECON_NO:-0
+201:     option fops-version 1298437
+202:     option ping-timeout 42
+203:     option remote-host gluster-server-2
+204:     option remote-subvolume /gluster/brick3/test-volume
+205:     option transport-type socket
+206:     option transport.address-family inet
+207:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+[2023-02-17 23:39:52.455043 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-24: intentional socket shutdown(36)
+208:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+209:     option transport.socket.ssl-enabled off
+210:     option transport.tcp-user-timeout 0
+211:     option transport.socket.keepalive-time 20
+212:     option transport.socket.keepalive-interval 2
+213:     option transport.socket.keepalive-count 9
+214:     option strict-locks off
+215: end-volume
+216:  
+217: volume test-volume-client-8
+218:     type protocol/client
+219:     option opversion 100000
+220:     option clnt-lk-version 1
+221:     option volfile-checksum 0
+222:     option volfile-key shd/test-volume
+223:     option client-version 10.1
+224:     option process-name glustershd
+225:     option process-uuid CTX_ID:1e15b6ef-06bd-4807-99ba-97d27463e457-GRAPH_ID:0-PID:6183-HOST:gluster-server-3-PC_NAME:test-volume-client-8-RECON_NO:-0
+226:     option fops-version 1298437
+227:     option ping-timeout 42
+228:     option remote-host gluster-server-3
+229:     option remote-subvolume /gluster/brick3/test-volume
+230:     option transport-type socket
+231:     option transport.address-family inet
+232:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+233:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+234:     option transport.socket.ssl-enabled off
+235:     option transport.tcp-user-timeout 0
+236:     option transport.socket.keepalive-time 20
+237:     option transport.socket.keepalive-interval 2
+238:     option transport.socket.keepalive-count 9
+239:     option strict-locks off
+240: end-volume
+241:  
+242: volume test-volume-disperse-2
+243:     type cluster/disperse
+244:     option redundancy 1
+245:     option self-heal-daemon enable
+246:     option iam-self-heal-daemon yes
+247:     subvolumes test-volume-client-6 test-volume-client-7 test-volume-client-8
+248: end-volume
+249:  
+250: volume test-volume-client-9
+251:     type protocol/client
+252:     option opversion 100000
+253:     option clnt-lk-version 1
+254:     option volfile-checksum 0
+255:     option volfile-key shd/test-volume
+256:     option client-version 10.1
+257:     option process-name glustershd
+258:     option process-uuid CTX_ID:1e15b6ef-06bd-4807-99ba-97d27463e457-GRAPH_ID:0-PID:6183-HOST:gluster-server-3-PC_NAME:test-volume-client-9-RECON_NO:-0
+259:     option fops-version 1298437
+260:     option ping-timeout 42
+261:     option remote-host gluster-server-1
+262:     option remote-subvolume /gluster/brick4/test-volume
+263:     option transport-type socket
+264:     option transport.address-family inet
+265:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+266:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+267:     option transport.socket.ssl-enabled off
+268:     option transport.tcp-user-timeout 0
+269:     option transport.socket.keepalive-time 20
+270:     option transport.socket.keepalive-interval 2
+271:     option transport.socket.keepalive-count 9
+272:     option strict-locks off
+273: end-volume
+274:  
+275: volume test-volume-client-10
+276:     type protocol/client
+277:     option opversion 100000
+278:     option clnt-lk-version 1
+279:     option volfile-checksum 0
+280:     option volfile-key shd/test-volume
+281:     option client-version 10.1
+282:     option process-name glustershd
+283:     option process-uuid CTX_ID:1e15b6ef-06bd-4807-99ba-97d27463e457-GRAPH_ID:0-PID:6183-HOST:gluster-server-3-PC_NAME:test-volume-client-10-RECON_NO:-0
+284:     option fops-version 1298437
+285:     option ping-timeout 42
+286:     option remote-host gluster-server-2
+287:     option remote-subvolume /gluster/brick4/test-volume
+288:     option transport-type socket
+289:     option transport.address-family inet
+290:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+291:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+292:     option transport.socket.ssl-enabled off
+293:     option transport.tcp-user-timeout 0
+294:     option transport.socket.keepalive-time 20
+295:     option transport.socket.keepalive-interval 2
+296:     option transport.socket.keepalive-count 9
+297:     option strict-locks off
+298: end-volume
+299:  
+300: volume test-volume-client-11
+301:     type protocol/client
+302:     option opversion 100000
+303:     option clnt-lk-version 1
+304:     option volfile-checksum 0
+305:     option volfile-key shd/test-volume
+306:     option client-version 10.1
+307:     option process-name glustershd
+308:     option process-uuid CTX_ID:1e15b6ef-06bd-4807-99ba-97d27463e457-GRAPH_ID:0-PID:6183-HOST:gluster-server-3-PC_NAME:test-volume-client-11-RECON_NO:-0
+309:     option fops-version 1298437
+310:     option ping-timeout 42
+311:     option remote-host gluster-server-3
+312:     option remote-subvolume /gluster/brick4/test-volume
+313:     option transport-type socket
+314:     option transport.address-family inet
+315:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+316:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+317:     option transport.socket.ssl-enabled off
+318:     option transport.tcp-user-timeout 0
+319:     option transport.socket.keepalive-time 20
+320:     option transport.socket.keepalive-interval 2
+321:     option transport.socket.keepalive-count 9
+322:     option strict-locks off
+323: end-volume
+324:  
+325: volume test-volume-disperse-3
+326:     type cluster/disperse
+327:     option redundancy 1
+328:     option self-heal-daemon enable
+329:     option iam-self-heal-daemon yes
+330:     subvolumes test-volume-client-9 test-volume-client-10 test-volume-client-11
+331: end-volume
+332:  
+333: volume test-volume-client-12
+334:     type protocol/client
+335:     option opversion 100000
+336:     option clnt-lk-version 1
+337:     option volfile-checksum 0
+338:     option volfile-key shd/test-volume
+339:     option client-version 10.1
+340:     option process-name glustershd
+341:     option process-uuid CTX_ID:1e15b6ef-06bd-4807-99ba-97d27463e457-GRAPH_ID:0-PID:6183-HOST:gluster-server-3-PC_NAME:test-volume-client-12-RECON_NO:-0
+342:     option fops-version 1298437
+343:     option ping-timeout 42
+344:     option remote-host gluster-server-1
+345:     option remote-subvolume /gluster/brick5/test-volume
+346:     option transport-type socket
+347:     option transport.address-family inet
+348:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+349:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+350:     option transport.socket.ssl-enabled off
+351:     option transport.tcp-user-timeout 0
+352:     option transport.socket.keepalive-time 20
+353:     option transport.socket.keepalive-interval 2
+354:     option transport.socket.keepalive-count 9
+355:     option strict-locks off
+356: end-volume
+357:  
+358: volume test-volume-client-13
+359:     type protocol/client
+360:     option opversion 100000
+361:     option clnt-lk-version 1
+362:     option volfile-checksum 0
+363:     option volfile-key shd/test-volume
+364:     option client-version 10.1
+365:     option process-name glustershd
+366:     option process-uuid CTX_ID:1e15b6ef-06bd-4807-99ba-97d27463e457-GRAPH_ID:0-PID:6183-HOST:gluster-server-3-PC_NAME:test-volume-client-13-RECON_NO:-0
+367:     option fops-version 1298437
+368:     option ping-timeout 42
+369:     option remote-host gluster-server-2
+370:     option remote-subvolume /gluster/brick5/test-volume
+371:     option transport-type socket
+372:     option transport.address-family inet
+373:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+374:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+375:     option transport.socket.ssl-enabled off
+376:     option transport.tcp-user-timeout 0
+377:     option transport.socket.keepalive-time 20
+378:     option transport.socket.keepalive-interval 2
+379:     option transport.socket.keepalive-count 9
+380:     option strict-locks off
+381: end-volume
+382:  
+383: volume test-volume-client-14
+384:     type protocol/client
+385:     option opversion 100000
+386:     option clnt-lk-version 1
+387:     option volfile-checksum 0
+388:     option volfile-key shd/test-volume
+389:     option client-version 10.1
+390:     option process-name glustershd
+391:     option process-uuid CTX_ID:1e15b6ef-06bd-4807-99ba-97d27463e457-GRAPH_ID:0-PID:6183-HOST:gluster-server-3-PC_NAME:test-volume-client-14-RECON_NO:-0
+392:     option fops-version 1298437
+393:     option ping-timeout 42
+394:     option remote-host gluster-server-3
+395:     option remote-subvolume /gluster/brick5/test-volume
+396:     option transport-type socket
+397:     option transport.address-family inet
+398:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+399:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+400:     option transport.socket.ssl-enabled off
+401:     option transport.tcp-user-timeout 0
+402:     option transport.socket.keepalive-time 20
+403:     option transport.socket.keepalive-interval 2
+404:     option transport.socket.keepalive-count 9
+405:     option strict-locks off
+406: end-volume
+407:  
+408: volume test-volume-disperse-4
+409:     type cluster/disperse
+410:     option redundancy 1
+411:     option self-heal-daemon enable
+412:     option iam-self-heal-daemon yes
+413:     subvolumes test-volume-client-12 test-volume-client-13 test-volume-client-14
+414: end-volume
+415:  
+416: volume test-volume-client-15
+417:     type protocol/client
+418:     option opversion 100000
+419:     option clnt-lk-version 1
+420:     option volfile-checksum 0
+421:     option volfile-key shd/test-volume
+422:     option client-version 10.1
+423:     option process-name glustershd
+424:     option process-uuid CTX_ID:1e15b6ef-06bd-4807-99ba-97d27463e457-GRAPH_ID:0-PID:6183-HOST:gluster-server-3-PC_NAME:test-volume-client-15-RECON_NO:-0
+425:     option fops-version 1298437
+426:     option ping-timeout 42
+427:     option remote-host gluster-server-1
+428:     option remote-subvolume /gluster/brick6/test-volume
+429:     option transport-type socket
+430:     option transport.address-family inet
+431:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+432:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+433:     option transport.socket.ssl-enabled off
+434:     option transport.tcp-user-timeout 0
+435:     option transport.socket.keepalive-time 20
+436:     option transport.socket.keepalive-interval 2
+437:     option transport.socket.keepalive-count 9
+438:     option strict-locks off
+439: end-volume
+440:  
+441: volume test-volume-client-16
+442:     type protocol/client
+443:     option opversion 100000
+[2023-02-17 23:39:52.455868 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-25: changing port to 59864 (from 0)
+444:     option clnt-lk-version 1
+445:     option volfile-checksum 0
+446:     option volfile-key shd/test-volume
+447:     option client-version 10.1
+448:     option process-name glustershd
+449:     option process-uuid CTX_ID:1e15b6ef-06bd-4807-99ba-97d27463e457-GRAPH_ID:0-PID:6183-HOST:gluster-server-3-PC_NAME:test-volume-client-16-RECON_NO:-0
+450:     option fops-version 1298437
+451:     option ping-timeout 42
+452:     option remote-host gluster-server-2
+453:     option remote-subvolume /gluster/brick6/test-volume
+454:     option transport-type socket
+455:     option transport.address-family inet
+[2023-02-17 23:39:52.455931 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-25: intentional socket shutdown(37)
+[2023-02-17 23:39:52.456039 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-26: changing port to 53173 (from 0)
+456:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+457:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+458:     option transport.socket.ssl-enabled off
+459:     option transport.tcp-user-timeout 0
+460:     option transport.socket.keepalive-time 20
+461:     option transport.socket.keepalive-interval 2
+462:     option transport.socket.keepalive-count 9
+463:     option strict-locks off
+464: end-volume
+465:  
+466: volume test-volume-client-17
+467:     type protocol/client
+468:     option opversion 100000
+469:     option clnt-lk-version 1
+470:     option volfile-checksum 0
+471:     option volfile-key shd/test-volume
+472:     option client-version 10.1
+473:     option process-name glustershd
+474:     option process-uuid CTX_ID:1e15b6ef-06bd-4807-99ba-97d27463e457-GRAPH_ID:0-PID:6183-HOST:gluster-server-3-PC_NAME:test-volume-client-17-RECON_NO:-0
+475:     option fops-version 1298437
+476:     option ping-timeout 42
+477:     option remote-host gluster-server-3
+478:     option remote-subvolume /gluster/brick6/test-volume
+479:     option transport-type socket
+480:     option transport.address-family inet
+481:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+482:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+483:     option transport.socket.ssl-enabled off
+484:     option transport.tcp-user-timeout 0
+485:     option transport.socket.keepalive-time 20
+486:     option transport.socket.keepalive-interval 2
+487:     option transport.socket.keepalive-count 9
+488:     option strict-locks off
+489: end-volume
+490:  
+491: volume test-volume-disperse-5
+492:     type cluster/disperse
+[2023-02-17 23:39:52.456128 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-26: intentional socket shutdown(38)
+[2023-02-17 23:39:52.456228 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-27: changing port to 60439 (from 0)
+[2023-02-17 23:39:52.456233 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-27: intentional socket shutdown(39)
+493:     option redundancy 1
+494:     option self-heal-daemon enable
+495:     option iam-self-heal-daemon yes
+496:     subvolumes test-volume-client-15 test-volume-client-16 test-volume-client-17
+497: end-volume
+498:  
+499: volume test-volume-client-18
+500:     type protocol/client
+501:     option opversion 100000
+502:     option clnt-lk-version 1
+503:     option volfile-checksum 0
+504:     option volfile-key shd/test-volume
+505:     option client-version 10.1
+506:     option process-name glustershd
+507:     option process-uuid CTX_ID:1e15b6ef-06bd-4807-99ba-97d27463e457-GRAPH_ID:0-PID:6183-HOST:gluster-server-3-PC_NAME:test-volume-client-18-RECON_NO:-0
+508:     option fops-version 1298437
+509:     option ping-timeout 42
+510:     option remote-host gluster-server-1
+511:     option remote-subvolume /gluster/brick7/test-volume
+512:     option transport-type socket
+513:     option transport.address-family inet
+514:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+515:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+516:     option transport.socket.ssl-enabled off
+517:     option transport.tcp-user-timeout 0
+518:     option transport.socket.keepalive-time 20
+519:     option transport.socket.keepalive-interval 2
+520:     option transport.socket.keepalive-count 9
+521:     option strict-locks off
+522: end-volume
+523:  
+524: volume test-volume-client-19
+525:     type protocol/client
+526:     option opversion 100000
+527:     option clnt-lk-version 1
+528:     option volfile-checksum 0
+529:     option volfile-key shd/test-volume
+530:     option client-version 10.1
+531:     option process-name glustershd
+532:     option process-uuid CTX_ID:1e15b6ef-06bd-4807-99ba-97d27463e457-GRAPH_ID:0-PID:6183-HOST:gluster-server-3-PC_NAME:test-volume-client-19-RECON_NO:-0
+533:     option fops-version 1298437
+534:     option ping-timeout 42
+535:     option remote-host gluster-server-2
+536:     option remote-subvolume /gluster/brick7/test-volume
+537:     option transport-type socket
+538:     option transport.address-family inet
+539:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+540:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+541:     option transport.socket.ssl-enabled off
+542:     option transport.tcp-user-timeout 0
+543:     option transport.socket.keepalive-time 20
+544:     option transport.socket.keepalive-interval 2
+545:     option transport.socket.keepalive-count 9
+546:     option strict-locks off
+547: end-volume
+548:  
+549: volume test-volume-client-20
+550:     type protocol/client
+551:     option opversion 100000
+552:     option clnt-lk-version 1
+553:     option volfile-checksum 0
+554:     option volfile-key shd/test-volume
+555:     option client-version 10.1
+556:     option process-name glustershd
+557:     option process-uuid CTX_ID:1e15b6ef-06bd-4807-99ba-97d27463e457-GRAPH_ID:0-PID:6183-HOST:gluster-server-3-PC_NAME:test-volume-client-20-RECON_NO:-0
+558:     option fops-version 1298437
+559:     option ping-timeout 42
+560:     option remote-host gluster-server-3
+561:     option remote-subvolume /gluster/brick7/test-volume
+562:     option transport-type socket
+563:     option transport.address-family inet
+564:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+565:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+566:     option transport.socket.ssl-enabled off
+567:     option transport.tcp-user-timeout 0
+568:     option transport.socket.keepalive-time 20
+569:     option transport.socket.keepalive-interval 2
+570:     option transport.socket.keepalive-count 9
+571:     option strict-locks off
+572: end-volume
+573:  
+574: volume test-volume-disperse-6
+575:     type cluster/disperse
+576:     option redundancy 1
+577:     option self-heal-daemon enable
+578:     option iam-self-heal-daemon yes
+579:     subvolumes test-volume-client-18 test-volume-client-19 test-volume-client-20
+580: end-volume
+581:  
+582: volume test-volume-client-21
+583:     type protocol/client
+584:     option opversion 100000
+585:     option clnt-lk-version 1
+586:     option volfile-checksum 0
+587:     option volfile-key shd/test-volume
+588:     option client-version 10.1
+589:     option process-name glustershd
+590:     option process-uuid CTX_ID:1e15b6ef-06bd-4807-99ba-97d27463e457-GRAPH_ID:0-PID:6183-HOST:gluster-server-3-PC_NAME:test-volume-client-21-RECON_NO:-0
+591:     option fops-version 1298437
+592:     option ping-timeout 42
+593:     option remote-host gluster-server-1
+594:     option remote-subvolume /gluster/brick8/test-volume
+595:     option transport-type socket
+596:     option transport.address-family inet
+597:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+598:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+599:     option transport.socket.ssl-enabled off
+600:     option transport.tcp-user-timeout 0
+601:     option transport.socket.keepalive-time 20
+602:     option transport.socket.keepalive-interval 2
+603:     option transport.socket.keepalive-count 9
+604:     option strict-locks off
+605: end-volume
+606:  
+607: volume test-volume-client-22
+608:     type protocol/client
+609:     option ping-timeout 42
+610:     option remote-host gluster-server-2
+611:     option remote-subvolume /gluster/brick8/test-volume
+612:     option transport-type socket
+613:     option transport.address-family inet
+614:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+615:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+616:     option transport.socket.ssl-enabled off
+617:     option transport.tcp-user-timeout 0
+618:     option transport.socket.keepalive-time 20
+619:     option transport.socket.keepalive-interval 2
+620:     option transport.socket.keepalive-count 9
+621:     option strict-locks off
+622: end-volume
+623:  
+624: volume test-volume-client-23
+625:     type protocol/client
+626:     option ping-timeout 42
+627:     option remote-host gluster-server-3
+628:     option remote-subvolume /gluster/brick8/test-volume
+629:     option transport-type socket
+630:     option transport.address-family inet
+631:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+632:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+633:     option transport.socket.ssl-enabled off
+634:     option transport.tcp-user-timeout 0
+[2023-02-17 23:39:52.457130 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-28: changing port to 59556 (from 0)
+[2023-02-17 23:39:52.457166 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-28: intentional socket shutdown(41)
+635:     option transport.socket.keepalive-time 20
+636:     option transport.socket.keepalive-interval 2
+637:     option transport.socket.keepalive-count 9
+[2023-02-17 23:39:52.457176 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-29: changing port to 57247 (from 0)
+638:     option strict-locks off
+639: end-volume
+640:  
+641: volume test-volume-disperse-7
+642:     type cluster/disperse
+643:     option redundancy 1
+644:     option self-heal-daemon enable
+645:     option iam-self-heal-daemon yes
+646:     subvolumes test-volume-client-21 test-volume-client-22 test-volume-client-23
+647: end-volume
+648:  
+649: volume test-volume-client-24
+650:     type protocol/client
+651:     option ping-timeout 42
+652:     option remote-host gluster-server-1
+653:     option remote-subvolume /gluster/brick9/test-volume
+654:     option transport-type socket
+655:     option transport.address-family inet
+656:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+657:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+658:     option transport.socket.ssl-enabled off
+659:     option transport.tcp-user-timeout 0
+660:     option transport.socket.keepalive-time 20
+661:     option transport.socket.keepalive-interval 2
+662:     option transport.socket.keepalive-count 9
+663:     option strict-locks off
+664: end-volume
+665:  
+666: volume test-volume-client-25
+667:     type protocol/client
+668:     option ping-timeout 42
+669:     option remote-host gluster-server-2
+[2023-02-17 23:39:52.457233 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-29: intentional socket shutdown(42)
+670:     option remote-subvolume /gluster/brick9/test-volume
+671:     option transport-type socket
+672:     option transport.address-family inet
+673:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+674:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+675:     option transport.socket.ssl-enabled off
+676:     option transport.tcp-user-timeout 0
+677:     option transport.socket.keepalive-time 20
+678:     option transport.socket.keepalive-interval 2
+679:     option transport.socket.keepalive-count 9
+680:     option strict-locks off
+681: end-volume
+682:  
+683: volume test-volume-client-26
+684:     type protocol/client
+685:     option ping-timeout 42
+686:     option remote-host gluster-server-3
+687:     option remote-subvolume /gluster/brick9/test-volume
+688:     option transport-type socket
+689:     option transport.address-family inet
+690:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+691:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+692:     option transport.socket.ssl-enabled off
+693:     option transport.tcp-user-timeout 0
+694:     option transport.socket.keepalive-time 20
+695:     option transport.socket.keepalive-interval 2
+696:     option transport.socket.keepalive-count 9
+697:     option strict-locks off
+698: end-volume
+699:  
+700: volume test-volume-disperse-8
+701:     type cluster/disperse
+702:     option redundancy 1
+703:     option self-heal-daemon enable
+704:     option iam-self-heal-daemon yes
+705:     subvolumes test-volume-client-24 test-volume-client-25 test-volume-client-26
+706: end-volume
+707:  
+708: volume test-volume-client-27
+709:     type protocol/client
+710:     option ping-timeout 42
+711:     option remote-host gluster-server-1
+712:     option remote-subvolume /gluster/brick10/test-volume
+713:     option transport-type socket
+714:     option transport.address-family inet
+715:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+716:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+717:     option transport.socket.ssl-enabled off
+718:     option transport.tcp-user-timeout 0
+719:     option transport.socket.keepalive-time 20
+[2023-02-17 23:39:52.457485 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-18: Connected, attached to remote volume [{conn-name=test-volume-client-18}, {remote_subvol=/gluster/brick7/test-volume}] 
+[2023-02-17 23:39:52.457502 +0000] I [MSGID: 122062] [ec.c:336:ec_up] 0-test-volume-disperse-6: Going UP : Child UP = 111 Child Notify = 111 
+720:     option transport.socket.keepalive-interval 2
+721:     option transport.socket.keepalive-count 9
+722:     option strict-locks off
+723: end-volume
+724:  
+725: volume test-volume-client-28
+726:     type protocol/client
+727:     option ping-timeout 42
+728:     option remote-host gluster-server-2
+729:     option remote-subvolume /gluster/brick10/test-volume
+730:     option transport-type socket
+731:     option transport.address-family inet
+732:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+733:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+734:     option transport.socket.ssl-enabled off
+735:     option transport.tcp-user-timeout 0
+736:     option transport.socket.keepalive-time 20
+737:     option transport.socket.keepalive-interval 2
+738:     option transport.socket.keepalive-count 9
+739:     option strict-locks off
+740: end-volume
+741:  
+742: volume test-volume-client-29
+743:     type protocol/client
+744:     option ping-timeout 42
+745:     option remote-host gluster-server-3
+746:     option remote-subvolume /gluster/brick10/test-volume
+747:     option transport-type socket
+748:     option transport.address-family inet
+749:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+750:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+751:     option transport.socket.ssl-enabled off
+752:     option transport.tcp-user-timeout 0
+753:     option transport.socket.keepalive-time 20
+754:     option transport.socket.keepalive-interval 2
+755:     option transport.socket.keepalive-count 9
+756:     option strict-locks off
+757: end-volume
+758:  
+759: volume test-volume-disperse-9
+760:     type cluster/disperse
+761:     option redundancy 1
+762:     option self-heal-daemon enable
+763:     option iam-self-heal-daemon yes
+764:     subvolumes test-volume-client-27 test-volume-client-28 test-volume-client-29
+765: end-volume
+766:  
+767: volume test-volume-client-30
+768:     type protocol/client
+769:     option ping-timeout 42
+770:     option remote-host gluster-server-1
+771:     option remote-subvolume /gluster/brick11/test-volume
+772:     option transport-type socket
+773:     option transport.address-family inet
+774:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+775:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+776:     option transport.socket.ssl-enabled off
+777:     option transport.tcp-user-timeout 0
+778:     option transport.socket.keepalive-time 20
+779:     option transport.socket.keepalive-interval 2
+780:     option transport.socket.keepalive-count 9
+781:     option strict-locks off
+782: end-volume
+783:  
+784: volume test-volume-client-31
+785:     type protocol/client
+786:     option ping-timeout 42
+787:     option remote-host gluster-server-2
+788:     option remote-subvolume /gluster/brick11/test-volume
+789:     option transport-type socket
+790:     option transport.address-family inet
+791:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+792:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+793:     option transport.socket.ssl-enabled off
+794:     option transport.tcp-user-timeout 0
+795:     option transport.socket.keepalive-time 20
+796:     option transport.socket.keepalive-interval 2
+797:     option transport.socket.keepalive-count 9
+798:     option strict-locks off
+799: end-volume
+800:  
+801: volume test-volume-client-32
+802:     type protocol/client
+803:     option ping-timeout 42
+804:     option remote-host gluster-server-3
+805:     option remote-subvolume /gluster/brick11/test-volume
+806:     option transport-type socket
+807:     option transport.address-family inet
+808:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+809:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+810:     option transport.socket.ssl-enabled off
+811:     option transport.tcp-user-timeout 0
+812:     option transport.socket.keepalive-time 20
+813:     option transport.socket.keepalive-interval 2
+814:     option transport.socket.keepalive-count 9
+815:     option strict-locks off
+816: end-volume
+817:  
+818: volume test-volume-disperse-10
+819:     type cluster/disperse
+820:     option redundancy 1
+821:     option self-heal-daemon enable
+822:     option iam-self-heal-daemon yes
+823:     subvolumes test-volume-client-30 test-volume-client-31 test-volume-client-32
+824: end-volume
+825:  
+826: volume test-volume-client-33
+827:     type protocol/client
+828:     option ping-timeout 42
+829:     option remote-host gluster-server-1
+830:     option remote-subvolume /gluster/brick12/test-volume
+831:     option transport-type socket
+832:     option transport.address-family inet
+833:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+834:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+835:     option transport.socket.ssl-enabled off
+836:     option transport.tcp-user-timeout 0
+837:     option transport.socket.keepalive-time 20
+838:     option transport.socket.keepalive-interval 2
+839:     option transport.socket.keepalive-count 9
+840:     option strict-locks off
+841: end-volume
+842:  
+843: volume test-volume-client-34
+844:     type protocol/client
+845:     option ping-timeout 42
+846:     option remote-host gluster-server-2
+847:     option remote-subvolume /gluster/brick12/test-volume
+848:     option transport-type socket
+849:     option transport.address-family inet
+850:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+851:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+852:     option transport.socket.ssl-enabled off
+853:     option transport.tcp-user-timeout 0
+854:     option transport.socket.keepalive-time 20
+855:     option transport.socket.keepalive-interval 2
+856:     option transport.socket.keepalive-count 9
+857:     option strict-locks off
+858: end-volume
+859:  
+860: volume test-volume-client-35
+861:     type protocol/client
+862:     option ping-timeout 42
+863:     option remote-host gluster-server-3
+864:     option remote-subvolume /gluster/brick12/test-volume
+865:     option transport-type socket
+866:     option transport.address-family inet
+867:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+868:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+869:     option transport.socket.ssl-enabled off
+870:     option transport.tcp-user-timeout 0
+871:     option transport.socket.keepalive-time 20
+872:     option transport.socket.keepalive-interval 2
+873:     option transport.socket.keepalive-count 9
+874:     option strict-locks off
+875: end-volume
+876:  
+877: volume test-volume-disperse-11
+878:     type cluster/disperse
+879:     option redundancy 1
+880:     option self-heal-daemon enable
+881:     option iam-self-heal-daemon yes
+882:     subvolumes test-volume-client-33 test-volume-client-34 test-volume-client-35
+883: end-volume
+884:  
+885: volume test-volume-client-36
+886:     type protocol/client
+887:     option ping-timeout 42
+888:     option remote-host gluster-server-1
+889:     option remote-subvolume /gluster/brick13/test-volume
+890:     option transport-type socket
+891:     option transport.address-family inet
+892:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+893:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+894:     option transport.socket.ssl-enabled off
+895:     option transport.tcp-user-timeout 0
+896:     option transport.socket.keepalive-time 20
+897:     option transport.socket.keepalive-interval 2
+898:     option transport.socket.keepalive-count 9
+899:     option strict-locks off
+900: end-volume
+901:  
+902: volume test-volume-client-37
+903:     type protocol/client
+904:     option ping-timeout 42
+905:     option remote-host gluster-server-2
+906:     option remote-subvolume /gluster/brick13/test-volume
+907:     option transport-type socket
+908:     option transport.address-family inet
+909:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+910:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+911:     option transport.socket.ssl-enabled off
+912:     option transport.tcp-user-timeout 0
+913:     option transport.socket.keepalive-time 20
+914:     option transport.socket.keepalive-interval 2
+915:     option transport.socket.keepalive-count 9
+916:     option strict-locks off
+917: end-volume
+918:  
+919: volume test-volume-client-38
+920:     type protocol/client
+921:     option ping-timeout 42
+922:     option remote-host gluster-server-3
+923:     option remote-subvolume /gluster/brick13/test-volume
+924:     option transport-type socket
+925:     option transport.address-family inet
+926:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+927:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+928:     option transport.socket.ssl-enabled off
+929:     option transport.tcp-user-timeout 0
+930:     option transport.socket.keepalive-time 20
+931:     option transport.socket.keepalive-interval 2
+932:     option transport.socket.keepalive-count 9
+933:     option strict-locks off
+934: end-volume
+935:  
+936: volume test-volume-disperse-12
+937:     type cluster/disperse
+938:     option redundancy 1
+939:     option self-heal-daemon enable
+940:     option iam-self-heal-daemon yes
+941:     subvolumes test-volume-client-36 test-volume-client-37 test-volume-client-38
+942: end-volume
+943:  
+944: volume test-volume-client-39
+945:     type protocol/client
+946:     option ping-timeout 42
+947:     option remote-host gluster-server-1
+948:     option remote-subvolume /gluster/brick14/test-volume
+949:     option transport-type socket
+950:     option transport.address-family inet
+951:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+952:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+953:     option transport.socket.ssl-enabled off
+954:     option transport.tcp-user-timeout 0
+955:     option transport.socket.keepalive-time 20
+956:     option transport.socket.keepalive-interval 2
+957:     option transport.socket.keepalive-count 9
+958:     option strict-locks off
+959: end-volume
+960:  
+961: volume test-volume-client-40
+962:     type protocol/client
+963:     option ping-timeout 42
+964:     option remote-host gluster-server-2
+965:     option remote-subvolume /gluster/brick14/test-volume
+966:     option transport-type socket
+967:     option transport.address-family inet
+968:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+969:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+970:     option transport.socket.ssl-enabled off
+971:     option transport.tcp-user-timeout 0
+972:     option transport.socket.keepalive-time 20
+973:     option transport.socket.keepalive-interval 2
+974:     option transport.socket.keepalive-count 9
+975:     option strict-locks off
+976: end-volume
+977:  
+978: volume test-volume-client-41
+979:     type protocol/client
+980:     option ping-timeout 42
+981:     option remote-host gluster-server-3
+982:     option remote-subvolume /gluster/brick14/test-volume
+983:     option transport-type socket
+984:     option transport.address-family inet
+985:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+986:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+987:     option transport.socket.ssl-enabled off
+988:     option transport.tcp-user-timeout 0
+989:     option transport.socket.keepalive-time 20
+990:     option transport.socket.keepalive-interval 2
+991:     option transport.socket.keepalive-count 9
+992:     option strict-locks off
+993: end-volume
+994:  
+995: volume test-volume-disperse-13
+996:     type cluster/disperse
+997:     option redundancy 1
+998:     option self-heal-daemon enable
+999:     option iam-self-heal-daemon yes
+1000:     subvolumes test-volume-client-39 test-volume-client-40 test-volume-client-41
+1001: end-volume
+1002:  
+1003: volume test-volume-client-42
+1004:     type protocol/client
+1005:     option ping-timeout 42
+1006:     option remote-host gluster-server-1
+1007:     option remote-subvolume /gluster/brick15/test-volume
+1008:     option transport-type socket
+1009:     option transport.address-family inet
+1010:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+1011:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+1012:     option transport.socket.ssl-enabled off
+1013:     option transport.tcp-user-timeout 0
+1014:     option transport.socket.keepalive-time 20
+1015:     option transport.socket.keepalive-interval 2
+1016:     option transport.socket.keepalive-count 9
+1017:     option strict-locks off
+1018: end-volume
+1019:  
+1020: volume test-volume-client-43
+1021:     type protocol/client
+1022:     option ping-timeout 42
+1023:     option remote-host gluster-server-2
+1024:     option remote-subvolume /gluster/brick15/test-volume
+1025:     option transport-type socket
+1026:     option transport.address-family inet
+1027:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+1028:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+1029:     option transport.socket.ssl-enabled off
+1030:     option transport.tcp-user-timeout 0
+1031:     option transport.socket.keepalive-time 20
+1032:     option transport.socket.keepalive-interval 2
+1033:     option transport.socket.keepalive-count 9
+1034:     option strict-locks off
+1035: end-volume
+1036:  
+1037: volume test-volume-client-44
+1038:     type protocol/client
+1039:     option ping-timeout 42
+1040:     option remote-host gluster-server-3
+1041:     option remote-subvolume /gluster/brick15/test-volume
+1042:     option transport-type socket
+1043:     option transport.address-family inet
+1044:     option username dec13ccf-6b50-4f01-b65d-72bb74f7892a
+1045:     option password 413a0239-8388-45f2-a709-90ce73eb5e99
+1046:     option transport.socket.ssl-enabled off
+1047:     option transport.tcp-user-timeout 0
+1048:     option transport.socket.keepalive-time 20
+1049:     option transport.socket.keepalive-interval 2
+1050:     option transport.socket.keepalive-count 9
+1051:     option strict-locks off
+1052: end-volume
+1053:  
+1054: volume test-volume-disperse-14
+1055:     type cluster/disperse
+1056:     option redundancy 1
+1057:     option self-heal-daemon enable
+1058:     option iam-self-heal-daemon yes
+1059:     subvolumes test-volume-client-42 test-volume-client-43 test-volume-client-44
+1060: end-volume
+1061:  
+1062: volume test-volume
+1063:     type debug/io-stats
+1064:     option log-level INFO
+1065:     option threads 16
+1066:     subvolumes test-volume-disperse-0 test-volume-disperse-1 test-volume-disperse-2 test-volume-disperse-3 test-volume-disperse-4 test-volume-disperse-5 test-volume-disperse-6 test-volume-disperse-7 test-volume-disperse-8 test-volume-disperse-9 test-volume-disperse-10 test-volume-disperse-11 test-volume-disperse-12 test-volume-disperse-13 test-volume-disperse-14
+1067: end-volume
+1068:  
++------------------------------------------------------------------------------+
+[2023-02-17 23:39:52.459944 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-30: changing port to 60061 (from 0)
+[2023-02-17 23:39:52.459972 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-30: intentional socket shutdown(43)
+[2023-02-17 23:39:52.459931 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-31: changing port to 58505 (from 0)
+[2023-02-17 23:39:52.460001 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-31: intentional socket shutdown(30)
+[2023-02-17 23:39:52.460701 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-32: changing port to 50305 (from 0)
+[2023-02-17 23:39:52.460807 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-32: intentional socket shutdown(44)
+[2023-02-17 23:39:52.461598 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-33: changing port to 55697 (from 0)
+[2023-02-17 23:39:52.461675 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-33: intentional socket shutdown(45)
+[2023-02-17 23:39:52.462951 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-34: changing port to 52464 (from 0)
+[2023-02-17 23:39:52.462990 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-34: intentional socket shutdown(46)
+[2023-02-17 23:39:52.463689 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-35: changing port to 51555 (from 0)
+[2023-02-17 23:39:52.463803 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-35: intentional socket shutdown(47)
+[2023-02-17 23:39:52.463837 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-36: changing port to 53297 (from 0)
+[2023-02-17 23:39:52.463846 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-36: intentional socket shutdown(48)
+[2023-02-17 23:39:52.464305 +0000] I [MSGID: 122002] [ec-heal.c:2623:ec_heal_do] 0-test-volume-disperse-5: Index entry needs to be purged for: 00000000-0000-0000-0000-000000000001  
+[2023-02-17 23:39:52.464854 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-37: changing port to 53321 (from 0)
+[2023-02-17 23:39:52.464903 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-37: intentional socket shutdown(49)
+[2023-02-17 23:39:52.465152 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-38: changing port to 55783 (from 0)
+[2023-02-17 23:39:52.465283 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-38: intentional socket shutdown(50)
+[2023-02-17 23:39:52.465430 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-39: changing port to 50181 (from 0)
+[2023-02-17 23:39:52.465455 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-39: intentional socket shutdown(51)
+[2023-02-17 23:39:52.465532 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-22: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.465597 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-40: changing port to 50066 (from 0)
+[2023-02-17 23:39:52.465614 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-40: intentional socket shutdown(52)
+[2023-02-17 23:39:52.465807 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-41: changing port to 52673 (from 0)
+[2023-02-17 23:39:52.465811 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-23: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.465892 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-41: intentional socket shutdown(53)
+[2023-02-17 23:39:52.465918 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-24: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.466332 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-42: changing port to 60679 (from 0)
+[2023-02-17 23:39:52.466532 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-42: intentional socket shutdown(54)
+[2023-02-17 23:39:52.469660 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-25: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.469777 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-27: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.469835 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-28: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.469877 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-29: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.470715 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-43: changing port to 57079 (from 0)
+[2023-02-17 23:39:52.470815 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-43: intentional socket shutdown(55)
+[2023-02-17 23:39:52.471207 +0000] I [rpc-clnt.c:1969:rpc_clnt_reconfig] 0-test-volume-client-44: changing port to 58070 (from 0)
+[2023-02-17 23:39:52.471314 +0000] I [socket.c:834:__socket_shutdown] 0-test-volume-client-44: intentional socket shutdown(57)
+[2023-02-17 23:39:52.473495 +0000] I [MSGID: 122002] [ec-heal.c:2623:ec_heal_do] 0-test-volume-disperse-6: Index entry needs to be purged for: 00000000-0000-0000-0000-000000000001  
+[2023-02-17 23:39:52.473973 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-31: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.474064 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-30: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.474119 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-26: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.477674 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-22: Connected, attached to remote volume [{conn-name=test-volume-client-22}, {remote_subvol=/gluster/brick8/test-volume}] 
+[2023-02-17 23:39:52.477834 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-32: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.478492 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-34: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.478585 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-33: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.478621 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-23: Connected, attached to remote volume [{conn-name=test-volume-client-23}, {remote_subvol=/gluster/brick8/test-volume}] 
+[2023-02-17 23:39:52.478648 +0000] I [MSGID: 122062] [ec.c:336:ec_up] 0-test-volume-disperse-7: Going UP : Child UP = 111 Child Notify = 111 
+[2023-02-17 23:39:52.478850 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-24: Connected, attached to remote volume [{conn-name=test-volume-client-24}, {remote_subvol=/gluster/brick9/test-volume}] 
+[2023-02-17 23:39:52.479292 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-35: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.479313 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-36: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.480057 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-25: Connected, attached to remote volume [{conn-name=test-volume-client-25}, {remote_subvol=/gluster/brick9/test-volume}] 
+[2023-02-17 23:39:52.480104 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-26: Connected, attached to remote volume [{conn-name=test-volume-client-26}, {remote_subvol=/gluster/brick9/test-volume}] 
+[2023-02-17 23:39:52.480122 +0000] I [MSGID: 122062] [ec.c:336:ec_up] 0-test-volume-disperse-8: Going UP : Child UP = 111 Child Notify = 111 
+[2023-02-17 23:39:52.480104 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-28: Connected, attached to remote volume [{conn-name=test-volume-client-28}, {remote_subvol=/gluster/brick10/test-volume}] 
+[2023-02-17 23:39:52.482707 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-29: Connected, attached to remote volume [{conn-name=test-volume-client-29}, {remote_subvol=/gluster/brick10/test-volume}] 
+[2023-02-17 23:39:52.482760 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-37: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.483044 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-39: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.483353 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-38: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.484194 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-40: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.484579 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-31: Connected, attached to remote volume [{conn-name=test-volume-client-31}, {remote_subvol=/gluster/brick11/test-volume}] 
+[2023-02-17 23:39:52.484690 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-27: Connected, attached to remote volume [{conn-name=test-volume-client-27}, {remote_subvol=/gluster/brick10/test-volume}] 
+[2023-02-17 23:39:52.484767 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-43: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.484862 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-41: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.484970 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-44: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.485034 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-32: Connected, attached to remote volume [{conn-name=test-volume-client-32}, {remote_subvol=/gluster/brick11/test-volume}] 
+[2023-02-17 23:39:52.485076 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-34: Connected, attached to remote volume [{conn-name=test-volume-client-34}, {remote_subvol=/gluster/brick12/test-volume}] 
+[2023-02-17 23:39:52.485114 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-35: Connected, attached to remote volume [{conn-name=test-volume-client-35}, {remote_subvol=/gluster/brick12/test-volume}] 
+[2023-02-17 23:39:52.485138 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-37: Connected, attached to remote volume [{conn-name=test-volume-client-37}, {remote_subvol=/gluster/brick13/test-volume}] 
+[2023-02-17 23:39:52.485176 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-39: Connected, attached to remote volume [{conn-name=test-volume-client-39}, {remote_subvol=/gluster/brick14/test-volume}] 
+[2023-02-17 23:39:52.485204 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-38: Connected, attached to remote volume [{conn-name=test-volume-client-38}, {remote_subvol=/gluster/brick13/test-volume}] 
+[2023-02-17 23:39:52.485496 +0000] I [MSGID: 122002] [ec-heal.c:2623:ec_heal_do] 0-test-volume-disperse-8: Index entry needs to be purged for: 00000000-0000-0000-0000-000000000001  
+[2023-02-17 23:39:52.485703 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-36: Connected, attached to remote volume [{conn-name=test-volume-client-36}, {remote_subvol=/gluster/brick13/test-volume}] 
+[2023-02-17 23:39:52.485725 +0000] I [MSGID: 122062] [ec.c:336:ec_up] 0-test-volume-disperse-12: Going UP : Child UP = 111 Child Notify = 111 
+[2023-02-17 23:39:52.486543 +0000] I [MSGID: 114057] [client-handshake.c:1118:select_server_supported_programs] 0-test-volume-client-42: Using Program [{Program-name=GlusterFS 4.x v1}, {Num=1298437}, {Version=400}] 
+[2023-02-17 23:39:52.486871 +0000] I [MSGID: 122062] [ec.c:336:ec_up] 0-test-volume-disperse-9: Going UP : Child UP = 111 Child Notify = 111 
+[2023-02-17 23:39:52.486923 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-41: Connected, attached to remote volume [{conn-name=test-volume-client-41}, {remote_subvol=/gluster/brick14/test-volume}] 
+[2023-02-17 23:39:52.487244 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-44: Connected, attached to remote volume [{conn-name=test-volume-client-44}, {remote_subvol=/gluster/brick15/test-volume}] 
+[2023-02-17 23:39:52.488183 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-33: Connected, attached to remote volume [{conn-name=test-volume-client-33}, {remote_subvol=/gluster/brick12/test-volume}] 
+[2023-02-17 23:39:52.488233 +0000] I [MSGID: 122062] [ec.c:336:ec_up] 0-test-volume-disperse-11: Going UP : Child UP = 111 Child Notify = 111 
+[2023-02-17 23:39:52.488724 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-30: Connected, attached to remote volume [{conn-name=test-volume-client-30}, {remote_subvol=/gluster/brick11/test-volume}] 
+[2023-02-17 23:39:52.488784 +0000] I [MSGID: 122062] [ec.c:336:ec_up] 0-test-volume-disperse-10: Going UP : Child UP = 111 Child Notify = 111 
+[2023-02-17 23:39:52.491832 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-42: Connected, attached to remote volume [{conn-name=test-volume-client-42}, {remote_subvol=/gluster/brick15/test-volume}] 
+[2023-02-17 23:39:52.493335 +0000] I [MSGID: 122002] [ec-heal.c:2623:ec_heal_do] 0-test-volume-disperse-9: Index entry needs to be purged for: 00000000-0000-0000-0000-000000000001  
+[2023-02-17 23:39:52.493384 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-43: Connected, attached to remote volume [{conn-name=test-volume-client-43}, {remote_subvol=/gluster/brick15/test-volume}] 
+[2023-02-17 23:39:52.493397 +0000] I [MSGID: 122062] [ec.c:336:ec_up] 0-test-volume-disperse-14: Going UP : Child UP = 111 Child Notify = 111 
+[2023-02-17 23:39:52.493699 +0000] I [MSGID: 114046] [client-handshake.c:856:client_setvolume_cbk] 0-test-volume-client-40: Connected, attached to remote volume [{conn-name=test-volume-client-40}, {remote_subvol=/gluster/brick14/test-volume}] 
+[2023-02-17 23:39:52.493728 +0000] I [MSGID: 122062] [ec.c:336:ec_up] 0-test-volume-disperse-13: Going UP : Child UP = 111 Child Notify = 111 
+[2023-02-17 23:39:52.494264 +0000] I [MSGID: 122002] [ec-heal.c:2623:ec_heal_do] 0-test-volume-disperse-7: Index entry needs to be purged for: 00000000-0000-0000-0000-000000000001  
+[2023-02-17 23:39:52.494360 +0000] I [MSGID: 122002] [ec-heal.c:2623:ec_heal_do] 0-test-volume-disperse-12: Index entry needs to be purged for: 00000000-0000-0000-0000-000000000001  
+[2023-02-17 23:39:52.497155 +0000] I [MSGID: 122002] [ec-heal.c:2623:ec_heal_do] 0-test-volume-disperse-11: Index entry needs to be purged for: 00000000-0000-0000-0000-000000000001  
+[2023-02-17 23:39:52.497265 +0000] I [MSGID: 122002] [ec-heal.c:2623:ec_heal_do] 0-test-volume-disperse-10: Index entry needs to be purged for: 00000000-0000-0000-0000-000000000001  
+[2023-02-17 23:39:52.501896 +0000] I [MSGID: 122002] [ec-heal.c:2623:ec_heal_do] 0-test-volume-disperse-14: Index entry needs to be purged for: 00000000-0000-0000-0000-000000000001  
+[2023-02-17 23:39:52.502000 +0000] I [MSGID: 122002] [ec-heal.c:2623:ec_heal_do] 0-test-volume-disperse-13: Index entry needs to be purged for: 00000000-0000-0000-0000-000000000001  
+[2023-02-17 23:39:53.844460 +0000] I [glusterfsd-mgmt.c:77:mgmt_cbk_spec] 0-mgmt: Volume file changed
+[2023-02-17 23:39:54.773788 +0000] I [glusterfsd-mgmt.c:2203:mgmt_getspec_cbk] 0-glusterfs: Received list of available volfile servers: gluster-server-1:24007 gluster-server-2:24007 
+[2023-02-17 23:39:54.773806 +0000] I [MSGID: 101221] [common-utils.c:3836:gf_set_volfile_server_common] 0-gluster: duplicate entry for volfile-server [{errno=17}, {error=File exists}] 
+[2023-02-17 23:39:54.773818 +0000] I [MSGID: 101221] [common-utils.c:3836:gf_set_volfile_server_common] 0-gluster: duplicate entry for volfile-server [{errno=17}, {error=File exists}] 
+[2023-02-17 23:39:54.773850 +0000] I [MSGID: 100040] [glusterfsd-mgmt.c:108:mgmt_process_volfile] 0-glusterfs: No change in volfile, countinuing [] 
+[2023-02-17 23:39:55.694539 +0000] I [glusterfsd-mgmt.c:77:mgmt_cbk_spec] 0-mgmt: Volume file changed
+[2023-02-17 23:39:56.628925 +0000] I [glusterfsd-mgmt.c:2203:mgmt_getspec_cbk] 0-glusterfs: Received list of available volfile servers: gluster-server-1:24007 gluster-server-2:24007 
+[2023-02-17 23:39:56.628945 +0000] I [MSGID: 101221] [common-utils.c:3836:gf_set_volfile_server_common] 0-gluster: duplicate entry for volfile-server [{errno=17}, {error=File exists}] 
+[2023-02-17 23:39:56.628957 +0000] I [MSGID: 101221] [common-utils.c:3836:gf_set_volfile_server_common] 0-gluster: duplicate entry for volfile-server [{errno=17}, {error=File exists}] 
+[2023-02-17 23:39:56.628988 +0000] I [MSGID: 100040] [glusterfsd-mgmt.c:108:mgmt_process_volfile] 0-glusterfs: No change in volfile, countinuing [] 
+[2023-02-17 23:39:57.537028 +0000] I [glusterfsd-mgmt.c:77:mgmt_cbk_spec] 0-mgmt: Volume file changed
+[2023-02-17 23:39:58.497970 +0000] I [glusterfsd-mgmt.c:2203:mgmt_getspec_cbk] 0-glusterfs: Received list of available volfile servers: gluster-server-1:24007 gluster-server-2:24007 
+[2023-02-17 23:39:58.497991 +0000] I [MSGID: 101221] [common-utils.c:3836:gf_set_volfile_server_common] 0-gluster: duplicate entry for volfile-server [{errno=17}, {error=File exists}] 
+[2023-02-17 23:39:58.498004 +0000] I [MSGID: 101221] [common-utils.c:3836:gf_set_volfile_server_common] 0-gluster: duplicate entry for volfile-server [{errno=17}, {error=File exists}] 
+[2023-02-17 23:39:58.498036 +0000] I [MSGID: 100040] [glusterfsd-mgmt.c:108:mgmt_process_volfile] 0-glusterfs: No change in volfile, countinuing [] 
+[2023-02-17 23:39:59.402336 +0000] I [glusterfsd-mgmt.c:77:mgmt_cbk_spec] 0-mgmt: Volume file changed
+[2023-02-17 23:40:00.365535 +0000] I [glusterfsd-mgmt.c:2203:mgmt_getspec_cbk] 0-glusterfs: Received list of available volfile servers: gluster-server-1:24007 gluster-server-2:24007 
+[2023-02-17 23:40:00.365553 +0000] I [MSGID: 101221] [common-utils.c:3836:gf_set_volfile_server_common] 0-gluster: duplicate entry for volfile-server [{errno=17}, {error=File exists}] 
+[2023-02-17 23:40:00.365562 +0000] I [MSGID: 101221] [common-utils.c:3836:gf_set_volfile_server_common] 0-gluster: duplicate entry for volfile-server [{errno=17}, {error=File exists}] 
+[2023-02-17 23:40:00.365586 +0000] I [MSGID: 100040] [glusterfsd-mgmt.c:108:mgmt_process_volfile] 0-glusterfs: No change in volfile, countinuing [] 
+[2023-02-17 23:40:01.257367 +0000] I [glusterfsd-mgmt.c:77:mgmt_cbk_spec] 0-mgmt: Volume file changed
+[2023-02-17 23:40:02.223041 +0000] I [glusterfsd-mgmt.c:2203:mgmt_getspec_cbk] 0-glusterfs: Received list of available volfile servers: gluster-server-1:24007 gluster-server-2:24007 
+[2023-02-17 23:40:02.223064 +0000] I [MSGID: 101221] [common-utils.c:3836:gf_set_volfile_server_common] 0-gluster: duplicate entry for volfile-server [{errno=17}, {error=File exists}] 
+[2023-02-17 23:40:02.223076 +0000] I [MSGID: 101221] [common-utils.c:3836:gf_set_volfile_server_common] 0-gluster: duplicate entry for volfile-server [{errno=17}, {error=File exists}] 
+[2023-02-17 23:40:02.223108 +0000] I [MSGID: 100040] [glusterfsd-mgmt.c:108:mgmt_process_volfile] 0-glusterfs: No change in volfile, countinuing [] 
+[2023-02-17 23:40:03.144620 +0000] I [glusterfsd-mgmt.c:77:mgmt_cbk_spec] 0-mgmt: Volume file changed
+[2023-02-17 23:40:04.079624 +0000] I [glusterfsd-mgmt.c:2203:mgmt_getspec_cbk] 0-glusterfs: Received list of available volfile servers: gluster-server-1:24007 gluster-server-2:24007 
+[2023-02-17 23:40:04.079645 +0000] I [MSGID: 101221] [common-utils.c:3836:gf_set_volfile_server_common] 0-gluster: duplicate entry for volfile-server [{errno=17}, {error=File exists}] 
+[2023-02-17 23:40:04.079657 +0000] I [MSGID: 101221] [common-utils.c:3836:gf_set_volfile_server_common] 0-gluster: duplicate entry for volfile-server [{errno=17}, {error=File exists}] 
+[2023-02-17 23:40:04.079688 +0000] I [MSGID: 100040] [glusterfsd-mgmt.c:108:mgmt_process_volfile] 0-glusterfs: No change in volfile, countinuing [] 
+[2023-02-17 23:40:05.190961 +0000] I [glusterfsd-mgmt.c:77:mgmt_cbk_spec] 0-mgmt: Volume file changed
+[2023-02-17 23:40:06.467405 +0000] I [glusterfsd-mgmt.c:2203:mgmt_getspec_cbk] 0-glusterfs: Received list of available volfile servers: gluster-server-1:24007 gluster-server-2:24007 
+[2023-02-17 23:40:06.467435 +0000] I [MSGID: 101221] [common-utils.c:3836:gf_set_volfile_server_common] 0-gluster: duplicate entry for volfile-server [{errno=17}, {error=File exists}] 
+[2023-02-17 23:40:06.467452 +0000] I [MSGID: 101221] [common-utils.c:3836:gf_set_volfile_server_common] 0-gluster: duplicate entry for volfile-server [{errno=17}, {error=File exists}] 
+[2023-02-17 23:40:06.467496 +0000] I [MSGID: 100040] [glusterfsd-mgmt.c:108:mgmt_process_volfile] 0-glusterfs: No change in volfile, countinuing [] 
+[2023-02-17 23:40:07.213840 +0000] I [glusterfsd-mgmt.c:77:mgmt_cbk_spec] 0-mgmt: Volume file changed
+[2023-02-17 23:40:07.670885 +0000] I [glusterfsd-mgmt.c:2203:mgmt_getspec_cbk] 0-glusterfs: Received list of available volfile servers: gluster-server-1:24007 gluster-server-2:24007 
+[2023-02-17 23:40:07.670912 +0000] I [MSGID: 101221] [common-utils.c:3836:gf_set_volfile_server_common] 0-gluster: duplicate entry for volfile-server [{errno=17}, {error=File exists}] 
+[2023-02-17 23:40:07.670929 +0000] I [MSGID: 101221] [common-utils.c:3836:gf_set_volfile_server_common] 0-gluster: duplicate entry for volfile-server [{errno=17}, {error=File exists}] 
+[2023-02-17 23:40:07.670962 +0000] I [MSGID: 100040] [glusterfsd-mgmt.c:108:mgmt_process_volfile] 0-glusterfs: No change in volfile, countinuing [] 
+[2023-02-17 23:40:08.414926 +0000] I [glusterfsd-mgmt.c:77:mgmt_cbk_spec] 0-mgmt: Volume file changed
+[2023-02-17 23:40:08.869475 +0000] I [glusterfsd-mgmt.c:2203:mgmt_getspec_cbk] 0-glusterfs: Received list of available volfile servers: gluster-server-1:24007 gluster-server-2:24007 
+[2023-02-17 23:40:08.869503 +0000] I [MSGID: 101221] [common-utils.c:3836:gf_set_volfile_server_common] 0-gluster: duplicate entry for volfile-server [{errno=17}, {error=File exists}] 
+[2023-02-17 23:40:08.869519 +0000] I [MSGID: 101221] [common-utils.c:3836:gf_set_volfile_server_common] 0-gluster: duplicate entry for volfile-server [{errno=17}, {error=File exists}] 
+[2023-02-17 23:40:08.869550 +0000] I [MSGID: 100040] [glusterfsd-mgmt.c:108:mgmt_process_volfile] 0-glusterfs: No change in volfile, countinuing [] 
+[2023-02-17 23:40:09.633715 +0000] I [glusterfsd-mgmt.c:77:mgmt_cbk_spec] 0-mgmt: Volume file changed
+[2023-02-17 23:40:10.080124 +0000] I [glusterfsd-mgmt.c:2203:mgmt_getspec_cbk] 0-glusterfs: Received list of available volfile servers: gluster-server-1:24007 gluster-server-2:24007 
+[2023-02-17 23:40:10.080142 +0000] I [MSGID: 101221] [common-utils.c:3836:gf_set_volfile_server_common] 0-gluster: duplicate entry for volfile-server [{errno=17}, {error=File exists}] 
+[2023-02-17 23:40:10.080150 +0000] I [MSGID: 101221] [common-utils.c:3836:gf_set_volfile_server_common] 0-gluster: duplicate entry for volfile-server [{errno=17}, {error=File exists}] 
+[2023-02-17 23:40:10.080170 +0000] I [MSGID: 100040] [glusterfsd-mgmt.c:108:mgmt_process_volfile] 0-glusterfs: No change in volfile, countinuing [] 
+[2023-02-17 23:40:10.845866 +0000] I [glusterfsd-mgmt.c:77:mgmt_cbk_spec] 0-mgmt: Volume file changed
+[2023-02-17 23:40:11.307013 +0000] I [glusterfsd-mgmt.c:2203:mgmt_getspec_cbk] 0-glusterfs: Received list of available volfile servers: gluster-server-1:24007 gluster-server-2:24007 
+[2023-02-17 23:40:11.307048 +0000] I [MSGID: 101221] [common-utils.c:3836:gf_set_volfile_server_common] 0-gluster: duplicate entry for volfile-server [{errno=17}, {error=File exists}] 
+[2023-02-17 23:40:11.307060 +0000] I [MSGID: 101221] [common-utils.c:3836:gf_set_volfile_server_common] 0-gluster: duplicate entry for volfile-server [{errno=17}, {error=File exists}] 
+[2023-02-17 23:40:11.307092 +0000] I [MSGID: 100040] [glusterfsd-mgmt.c:108:mgmt_process_volfile] 0-glusterfs: No change in volfile, countinuing [] 

@@ -1,0 +1,341 @@
+[2023-02-17 23:39:47.555727 +0000] I [MSGID: 100030] [glusterfsd.c:2767:main] 0-/usr/sbin/glusterfsd: Started running version [{arg=/usr/sbin/glusterfsd}, {version=10.1}, {cmdlinestr=/usr/sbin/glusterfsd -s gluster-server-1 --volfile-id test-volume.gluster-server-1.gluster-brick12-test-volume -p /var/run/gluster/vols/test-volume/gluster-server-1-gluster-brick12-test-volume.pid -S /var/run/gluster/ce7dfd1174725a21.socket --brick-name /gluster/brick12/test-volume -l /var/log/glusterfs/bricks/gluster-brick12-test-volume.log --xlator-option *-posix.glusterd-uuid=d56df5e3-309c-4f3d-9697-a63fb632e73e --process-name brick --brick-port 55697 --xlator-option test-volume-server.listen-port=55697}] 
+[2023-02-17 23:39:47.556151 +0000] I [glusterfsd.c:2447:daemonize] 0-glusterfs: Pid of current running process is 6319
+[2023-02-17 23:39:47.559397 +0000] I [socket.c:915:__socket_server_bind] 0-socket.glusterfsd: closing (AF_UNIX) reuse check socket 9
+[2023-02-17 23:39:47.560327 +0000] I [MSGID: 101190] [event-epoll.c:667:event_dispatch_epoll_worker] 0-epoll: Started thread with index [{index=0}] 
+[2023-02-17 23:39:47.560360 +0000] I [MSGID: 101190] [event-epoll.c:667:event_dispatch_epoll_worker] 0-epoll: Started thread with index [{index=1}] 
+[2023-02-17 23:39:47.560585 +0000] I [glusterfsd-mgmt.c:2203:mgmt_getspec_cbk] 0-glusterfs: Received list of available volfile servers: gluster-server-2:24007 gluster-server-3:24007 
+[2023-02-17 23:39:47.562976 +0000] I [rpcsvc.c:2697:rpcsvc_set_outstanding_rpc_limit] 0-rpc-service: Configured rpc.outstanding-rpc-limit with value 64
+[2023-02-17 23:39:47.563453 +0000] I [io-stats.c:3701:ios_sample_buf_size_configure] 0-/gluster/brick12/test-volume: Configure ios_sample_buf  size is 1024 because ios_sample_interval is 0
+[2023-02-17 23:39:47.564970 +0000] I [trash.c:2480:init] 0-test-volume-trash: no option specified for 'eliminate', using NULL
+Final graph:
++------------------------------------------------------------------------------+
+  1: volume test-volume-posix
+  2:     type storage/posix
+  3:     option glusterd-uuid d56df5e3-309c-4f3d-9697-a63fb632e73e
+  4:     option directory /gluster/brick12/test-volume
+  5:     option volume-id 47fb42fa-db7d-43cc-b97a-c3f3128460e6
+  6:     option fips-mode-rchecksum on
+  7:     option shared-brick-count 1
+  8: end-volume
+  9:  
+ 10: volume test-volume-trash
+ 11:     type features/trash
+ 12:     option trash-dir .trashcan
+ 13:     option brick-path /gluster/brick12/test-volume
+ 14:     option trash-internal-op off
+ 15:     subvolumes test-volume-posix
+ 16: end-volume
+ 17:  
+ 18: volume test-volume-changelog
+ 19:     type features/changelog
+ 20:     option changelog-brick /gluster/brick12/test-volume
+ 21:     option changelog-dir /gluster/brick12/test-volume/.glusterfs/changelogs
+ 22:     option changelog-notification off
+ 23:     option changelog-barrier-timeout 120
+ 24:     subvolumes test-volume-trash
+ 25: end-volume
+ 26:  
+ 27: volume test-volume-bitrot-stub
+ 28:     type features/bitrot-stub
+ 29:     option export /gluster/brick12/test-volume
+ 30:     option bitrot disable
+ 31:     subvolumes test-volume-changelog
+ 32: end-volume
+ 33:  
+ 34: volume test-volume-access-control
+ 35:     type features/access-control
+ 36:     subvolumes test-volume-bitrot-stub
+ 37: end-volume
+ 38:  
+ 39: volume test-volume-locks
+ 40:     type features/locks
+ 41:     option enforce-mandatory-lock off
+ 42:     subvolumes test-volume-access-control
+ 43: end-volume
+ 44:  
+ 45: volume test-volume-worm
+ 46:     type features/worm
+ 47:     option worm off
+ 48:     option worm-file-level off
+ 49:     option worm-files-deletable on
+ 50:     subvolumes test-volume-locks
+ 51: end-volume
+ 52:  
+ 53: volume test-volume-read-only
+ 54:     type features/read-only
+ 55:     option read-only off
+ 56:     subvolumes test-volume-worm
+ 57: end-volume
+ 58:  
+ 59: volume test-volume-leases
+ 60:     type features/leases
+ 61:     option leases off
+ 62:     subvolumes test-volume-read-only
+ 63: end-volume
+ 64:  
+ 65: volume test-volume-upcall
+ 66:     type features/upcall
+ 67:     option cache-invalidation off
+ 68:     subvolumes test-volume-leases
+ 69: end-volume
+ 70:  
+ 71: volume test-volume-io-threads
+ 72:     type performance/io-threads
+ 73:     subvolumes test-volume-upcall
+ 74: end-volume
+ 75:  
+ 76: volume test-volume-selinux
+ 77:     type features/selinux
+ 78:     option selinux on
+ 79:     subvolumes test-volume-io-threads
+ 80: end-volume
+ 81:  
+ 82: volume test-volume-marker
+ 83:     type features/marker
+ 84:     option volume-uuid 47fb42fa-db7d-43cc-b97a-c3f3128460e6
+ 85:     option timestamp-file /var/lib/glusterd/vols/test-volume/marker.tstamp
+ 86:     option quota-version 0
+ 87:     option xtime off
+ 88:     option gsync-force-xtime off
+ 89:     option quota off
+ 90:     option inode-quota off
+ 91:     subvolumes test-volume-selinux
+ 92: end-volume
+ 93:  
+ 94: volume test-volume-barrier
+ 95:     type features/barrier
+ 96:     option barrier disable
+ 97:     option barrier-timeout 120
+ 98:     subvolumes test-volume-marker
+ 99: end-volume
+100:  
+101: volume test-volume-index
+102:     type features/index
+103:     option index-base /gluster/brick12/test-volume/.glusterfs/indices
+104:     option xattrop64-watchlist trusted.ec.dirty
+105:     subvolumes test-volume-barrier
+106: end-volume
+107:  
+108: volume test-volume-quota
+109:     type features/quota
+110:     option volume-uuid test-volume
+111:     option server-quota off
+112:     option deem-statfs off
+113:     subvolumes test-volume-index
+114: end-volume
+115:  
+116: volume /gluster/brick12/test-volume
+117:     type debug/io-stats
+118:     option auth.addr./gluster/brick12/test-volume.allow *
+119:     option auth-path /gluster/brick12/test-volume
+120:     option auth.login.dec13ccf-6b50-4f01-b65d-72bb74f7892a.password 413a0239-8388-45f2-a709-90ce73eb5e99
+121:     option auth.login./gluster/brick12/test-volume.allow dec13ccf-6b50-4f01-b65d-72bb74f7892a
+122:     option unique-id /gluster/brick12/test-volume
+123:     option volume-id 47fb42fa-db7d-43cc-b97a-c3f3128460e6
+124:     option log-level INFO
+125:     option threads 16
+126:     option latency-measurement off
+127:     option count-fop-hits off
+128:     option global-threading off
+129:     subvolumes test-volume-quota
+130: end-volume
+131:  
+132: volume test-volume-server
+133:     type protocol/server
+134:     option transport.socket.listen-port 55697
+135:     option rpc-auth.auth-glusterfs on
+136:     option rpc-auth.auth-unix on
+137:     option rpc-auth.auth-null on
+138:     option rpc-auth-allow-insecure on
+139:     option transport-type tcp
+140:     option transport.address-family inet
+141:     option auth.login./gluster/brick12/test-volume.allow dec13ccf-6b50-4f01-b65d-72bb74f7892a
+142:     option auth.login.dec13ccf-6b50-4f01-b65d-72bb74f7892a.password 413a0239-8388-45f2-a709-90ce73eb5e99
+143:     option auth-path /gluster/brick12/test-volume
+144:     option auth.addr./gluster/brick12/test-volume.allow *
+145:     option transport.socket.keepalive 1
+146:     option transport.socket.ssl-enabled off
+147:     option transport.socket.keepalive-time 20
+148:     option transport.socket.keepalive-interval 2
+149:     option transport.socket.keepalive-count 9
+150:     option transport.listen-backlog 1024
+151:     subvolumes /gluster/brick12/test-volume
+152: end-volume
+153:  
++------------------------------------------------------------------------------+
+[2023-02-17 23:39:49.526941 +0000] I [addr.c:52:compare_addr_and_update] 0-/gluster/brick12/test-volume: allowed = "*", received addr = "192.168.123.8"
+[2023-02-17 23:39:49.526952 +0000] I [login.c:109:gf_auth] 0-auth/login: allowed user names: dec13ccf-6b50-4f01-b65d-72bb74f7892a
+[2023-02-17 23:39:49.526957 +0000] I [MSGID: 115029] [server-handshake.c:565:server_setvolume] 0-test-volume-server: accepted client from CTX_ID:ac5f7eb0-aee5-4702-876f-46a1ab5fadf5-GRAPH_ID:0-PID:6384-HOST:gluster-server-1-PC_NAME:test-volume-client-33-RECON_NO:-0 (version: 10.1) with subvol /gluster/brick12/test-volume 
+[2023-02-17 23:39:52.463964 +0000] I [addr.c:52:compare_addr_and_update] 0-/gluster/brick12/test-volume: allowed = "*", received addr = "192.168.123.7"
+[2023-02-17 23:39:52.463991 +0000] I [login.c:109:gf_auth] 0-auth/login: allowed user names: dec13ccf-6b50-4f01-b65d-72bb74f7892a
+[2023-02-17 23:39:52.464007 +0000] I [MSGID: 115029] [server-handshake.c:565:server_setvolume] 0-test-volume-server: accepted client from CTX_ID:e4231bd7-7e45-4d94-a146-6d0e71337d4c-GRAPH_ID:0-PID:6194-HOST:gluster-server-2-PC_NAME:test-volume-client-33-RECON_NO:-0 (version: 10.1) with subvol /gluster/brick12/test-volume 
+[2023-02-17 23:39:52.473156 +0000] I [addr.c:52:compare_addr_and_update] 0-/gluster/brick12/test-volume: allowed = "*", received addr = "192.168.123.6"
+[2023-02-17 23:39:52.473185 +0000] I [login.c:109:gf_auth] 0-auth/login: allowed user names: dec13ccf-6b50-4f01-b65d-72bb74f7892a
+[2023-02-17 23:39:52.473191 +0000] I [MSGID: 115029] [server-handshake.c:565:server_setvolume] 0-test-volume-server: accepted client from CTX_ID:1e15b6ef-06bd-4807-99ba-97d27463e457-GRAPH_ID:0-PID:6183-HOST:gluster-server-3-PC_NAME:test-volume-client-33-RECON_NO:-0 (version: 10.1) with subvol /gluster/brick12/test-volume 
+[2023-02-17 23:39:52.481093 +0000] I [rpcsvc.c:850:rpcsvc_handle_rpc_call] 0-rpc-service: spawned a request handler thread for queue 0
+[2023-02-17 23:39:52.488471 +0000] I [rpcsvc.c:850:rpcsvc_handle_rpc_call] 0-rpc-service: spawned a request handler thread for queue 1
+[2023-02-17 23:39:53.146997 +0000] I [glusterfsd-mgmt.c:77:mgmt_cbk_spec] 0-mgmt: Volume file changed
+[2023-02-17 23:39:53.799133 +0000] I [glusterfsd-mgmt.c:2203:mgmt_getspec_cbk] 0-glusterfs: Received list of available volfile servers: gluster-server-2:24007 gluster-server-3:24007 
+[2023-02-17 23:39:53.799161 +0000] I [MSGID: 101221] [common-utils.c:3836:gf_set_volfile_server_common] 0-gluster: duplicate entry for volfile-server [{errno=17}, {error=File exists}] 
+[2023-02-17 23:39:53.799186 +0000] I [glusterfsd-mgmt.c:2236:mgmt_getspec_cbk] 0-glusterfs: No change in volfile,continuing
+[2023-02-17 23:39:55.000567 +0000] I [glusterfsd-mgmt.c:77:mgmt_cbk_spec] 0-mgmt: Volume file changed
+[2023-02-17 23:39:55.644720 +0000] I [glusterfsd-mgmt.c:2203:mgmt_getspec_cbk] 0-glusterfs: Received list of available volfile servers: gluster-server-2:24007 gluster-server-3:24007 
+[2023-02-17 23:39:55.644758 +0000] I [glusterfsd-mgmt.c:2236:mgmt_getspec_cbk] 0-glusterfs: No change in volfile,continuing
+[2023-02-17 23:39:56.870543 +0000] I [glusterfsd-mgmt.c:77:mgmt_cbk_spec] 0-mgmt: Volume file changed
+[2023-02-17 23:39:57.497364 +0000] I [glusterfsd-mgmt.c:2203:mgmt_getspec_cbk] 0-glusterfs: Received list of available volfile servers: gluster-server-2:24007 gluster-server-3:24007 
+[2023-02-17 23:39:57.497746 +0000] I [addr.c:52:compare_addr_and_update] 0-/gluster/brick12/test-volume: allowed = "*", received addr = "192.168.123.8"
+[2023-02-17 23:39:57.497753 +0000] I [login.c:109:gf_auth] 0-auth/login: allowed user names: dec13ccf-6b50-4f01-b65d-72bb74f7892a
+[2023-02-17 23:39:57.497760 +0000] I [addr.c:52:compare_addr_and_update] 0-/gluster/brick12/test-volume: allowed = "*", received addr = "192.168.123.7"
+[2023-02-17 23:39:57.497764 +0000] I [login.c:109:gf_auth] 0-auth/login: allowed user names: dec13ccf-6b50-4f01-b65d-72bb74f7892a
+[2023-02-17 23:39:57.497769 +0000] I [addr.c:52:compare_addr_and_update] 0-/gluster/brick12/test-volume: allowed = "*", received addr = "192.168.123.6"
+[2023-02-17 23:39:57.497773 +0000] I [login.c:109:gf_auth] 0-auth/login: allowed user names: dec13ccf-6b50-4f01-b65d-72bb74f7892a
+The message "I [MSGID: 101221] [common-utils.c:3836:gf_set_volfile_server_common] 0-gluster: duplicate entry for volfile-server [{errno=17}, {error=File exists}]" repeated 5 times between [2023-02-17 23:39:53.799161 +0000] and [2023-02-17 23:39:57.497380 +0000]
+[2023-02-17 23:39:57.497944 +0000] I [MSGID: 0] [options.c:1246:xlator_option_reconf_int32] 0-test-volume-posix: option shared-brick-count using set value 1 
+[2023-02-17 23:39:57.497986 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-posix: option fips-mode-rchecksum using set value on 
+[2023-02-17 23:39:57.497999 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-trash: option trash-internal-op using set value off 
+[2023-02-17 23:39:57.498010 +0000] I [MSGID: 0] [options.c:1242:xlator_option_reconf_str] 0-test-volume-trash: option trash-dir using set value .trashcan 
+[2023-02-17 23:39:57.498021 +0000] I [MSGID: 0] [options.c:1242:xlator_option_reconf_str] 0-test-volume-changelog: option changelog-dir using set value /gluster/brick12/test-volume/.glusterfs/changelogs 
+[2023-02-17 23:39:57.498053 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-changelog: option changelog-notification using set value off 
+[2023-02-17 23:39:57.498065 +0000] I [MSGID: 0] [options.c:1255:xlator_option_reconf_time] 0-test-volume-changelog: option changelog-barrier-timeout using set value 120 
+[2023-02-17 23:39:57.498071 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-bitrot-stub: option bitrot using set value disable 
+[2023-02-17 23:39:57.498086 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-locks: option enforce-mandatory-lock using set value off 
+[2023-02-17 23:39:57.498091 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-worm: option worm using set value off 
+[2023-02-17 23:39:57.498095 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-worm: option worm-file-level using set value off 
+[2023-02-17 23:39:57.498102 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-worm: option worm-files-deletable using set value on 
+[2023-02-17 23:39:57.498107 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-read-only: option read-only using set value off 
+[2023-02-17 23:39:57.498113 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-upcall: option cache-invalidation using set value on 
+[2023-02-17 23:39:57.498167 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-selinux: option selinux using set value on 
+[2023-02-17 23:39:57.498175 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-barrier: option barrier using set value disable 
+[2023-02-17 23:39:57.498179 +0000] I [MSGID: 0] [options.c:1255:xlator_option_reconf_time] 0-test-volume-barrier: option barrier-timeout using set value 120 
+[2023-02-17 23:39:57.498184 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-quota: option deem-statfs using set value off 
+[2023-02-17 23:39:57.498188 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-quota: option server-quota using set value off 
+[2023-02-17 23:39:57.498200 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-/gluster/brick12/test-volume: option count-fop-hits using set value off 
+[2023-02-17 23:39:57.498205 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-/gluster/brick12/test-volume: option latency-measurement using set value off 
+[2023-02-17 23:39:57.498211 +0000] I [io-stats.c:3701:ios_sample_buf_size_configure] 0-/gluster/brick12/test-volume: Configure ios_sample_buf  size is 1024 because ios_sample_interval is 0
+[2023-02-17 23:39:57.498217 +0000] I [MSGID: 0] [options.c:1242:xlator_option_reconf_str] 0-/gluster/brick12/test-volume: option log-level using set value INFO 
+[2023-02-17 23:39:57.498232 +0000] I [MSGID: 0] [options.c:1246:xlator_option_reconf_int32] 0-/gluster/brick12/test-volume: option threads using set value 16 
+[2023-02-17 23:39:58.739702 +0000] I [glusterfsd-mgmt.c:77:mgmt_cbk_spec] 0-mgmt: Volume file changed
+[2023-02-17 23:39:59.361965 +0000] I [glusterfsd-mgmt.c:2203:mgmt_getspec_cbk] 0-glusterfs: Received list of available volfile servers: gluster-server-2:24007 gluster-server-3:24007 
+[2023-02-17 23:39:59.361965 +0000] I [MSGID: 101221] [common-utils.c:3836:gf_set_volfile_server_common] 0-gluster: duplicate entry for volfile-server [{errno=17}, {error=File exists}] 
+[2023-02-17 23:39:59.362658 +0000] I [addr.c:52:compare_addr_and_update] 0-/gluster/brick12/test-volume: allowed = "*", received addr = "192.168.123.8"
+[2023-02-17 23:39:59.362658 +0000] I [login.c:109:gf_auth] 0-auth/login: allowed user names: dec13ccf-6b50-4f01-b65d-72bb74f7892a
+[2023-02-17 23:39:59.362669 +0000] I [addr.c:52:compare_addr_and_update] 0-/gluster/brick12/test-volume: allowed = "*", received addr = "192.168.123.7"
+[2023-02-17 23:39:59.362676 +0000] I [login.c:109:gf_auth] 0-auth/login: allowed user names: dec13ccf-6b50-4f01-b65d-72bb74f7892a
+[2023-02-17 23:39:59.362685 +0000] I [addr.c:52:compare_addr_and_update] 0-/gluster/brick12/test-volume: allowed = "*", received addr = "192.168.123.6"
+[2023-02-17 23:39:59.362691 +0000] I [login.c:109:gf_auth] 0-auth/login: allowed user names: dec13ccf-6b50-4f01-b65d-72bb74f7892a
+[2023-02-17 23:39:59.362005 +0000] I [MSGID: 101221] [common-utils.c:3836:gf_set_volfile_server_common] 0-gluster: duplicate entry for volfile-server [{errno=17}, {error=File exists}] 
+[2023-02-17 23:39:59.362871 +0000] I [MSGID: 0] [options.c:1246:xlator_option_reconf_int32] 0-test-volume-posix: option shared-brick-count using set value 1 
+[2023-02-17 23:39:59.362989 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-posix: option fips-mode-rchecksum using set value on 
+[2023-02-17 23:39:59.362989 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-trash: option trash-internal-op using set value off 
+[2023-02-17 23:39:59.363020 +0000] I [MSGID: 0] [options.c:1242:xlator_option_reconf_str] 0-test-volume-trash: option trash-dir using set value .trashcan 
+[2023-02-17 23:39:59.363020 +0000] I [MSGID: 0] [options.c:1242:xlator_option_reconf_str] 0-test-volume-changelog: option changelog-dir using set value /gluster/brick12/test-volume/.glusterfs/changelogs 
+[2023-02-17 23:39:59.363114 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-changelog: option changelog-notification using set value off 
+[2023-02-17 23:39:59.363146 +0000] I [MSGID: 0] [options.c:1255:xlator_option_reconf_time] 0-test-volume-changelog: option changelog-barrier-timeout using set value 120 
+[2023-02-17 23:39:59.363161 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-bitrot-stub: option bitrot using set value disable 
+[2023-02-17 23:39:59.363161 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-locks: option enforce-mandatory-lock using set value off 
+[2023-02-17 23:39:59.363161 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-worm: option worm using set value off 
+[2023-02-17 23:39:59.363164 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-worm: option worm-file-level using set value off 
+[2023-02-17 23:39:59.363211 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-worm: option worm-files-deletable using set value on 
+[2023-02-17 23:39:59.363242 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-read-only: option read-only using set value off 
+[2023-02-17 23:39:59.363242 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-upcall: option cache-invalidation using set value on 
+[2023-02-17 23:39:59.363269 +0000] I [MSGID: 0] [options.c:1255:xlator_option_reconf_time] 0-test-volume-upcall: option cache-invalidation-timeout using set value 600 
+[2023-02-17 23:39:59.363287 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-selinux: option selinux using set value on 
+[2023-02-17 23:39:59.363395 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-barrier: option barrier using set value disable 
+[2023-02-17 23:39:59.363413 +0000] I [MSGID: 0] [options.c:1255:xlator_option_reconf_time] 0-test-volume-barrier: option barrier-timeout using set value 120 
+[2023-02-17 23:39:59.363425 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-quota: option deem-statfs using set value off 
+[2023-02-17 23:39:59.363435 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-quota: option server-quota using set value off 
+[2023-02-17 23:39:59.363474 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-/gluster/brick12/test-volume: option count-fop-hits using set value off 
+[2023-02-17 23:39:59.363485 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-/gluster/brick12/test-volume: option latency-measurement using set value off 
+[2023-02-17 23:39:59.363501 +0000] I [io-stats.c:3701:ios_sample_buf_size_configure] 0-/gluster/brick12/test-volume: Configure ios_sample_buf  size is 1024 because ios_sample_interval is 0
+[2023-02-17 23:39:59.363515 +0000] I [MSGID: 0] [options.c:1242:xlator_option_reconf_str] 0-/gluster/brick12/test-volume: option log-level using set value INFO 
+[2023-02-17 23:39:59.363554 +0000] I [MSGID: 0] [options.c:1246:xlator_option_reconf_int32] 0-/gluster/brick12/test-volume: option threads using set value 16 
+[2023-02-17 23:40:00.601696 +0000] I [glusterfsd-mgmt.c:77:mgmt_cbk_spec] 0-mgmt: Volume file changed
+[2023-02-17 23:40:01.207560 +0000] I [glusterfsd-mgmt.c:2203:mgmt_getspec_cbk] 0-glusterfs: Received list of available volfile servers: gluster-server-2:24007 gluster-server-3:24007 
+[2023-02-17 23:40:01.207578 +0000] I [MSGID: 101221] [common-utils.c:3836:gf_set_volfile_server_common] 0-gluster: duplicate entry for volfile-server [{errno=17}, {error=File exists}] 
+[2023-02-17 23:40:01.207597 +0000] I [glusterfsd-mgmt.c:2236:mgmt_getspec_cbk] 0-glusterfs: No change in volfile,continuing
+[2023-02-17 23:40:02.449405 +0000] I [glusterfsd-mgmt.c:77:mgmt_cbk_spec] 0-mgmt: Volume file changed
+[2023-02-17 23:40:03.078367 +0000] I [glusterfsd-mgmt.c:2203:mgmt_getspec_cbk] 0-glusterfs: Received list of available volfile servers: gluster-server-2:24007 gluster-server-3:24007 
+[2023-02-17 23:40:03.078395 +0000] I [glusterfsd-mgmt.c:2236:mgmt_getspec_cbk] 0-glusterfs: No change in volfile,continuing
+[2023-02-17 23:40:04.326811 +0000] I [glusterfsd-mgmt.c:77:mgmt_cbk_spec] 0-mgmt: Volume file changed
+[2023-02-17 23:40:05.143353 +0000] I [glusterfsd-mgmt.c:2203:mgmt_getspec_cbk] 0-glusterfs: Received list of available volfile servers: gluster-server-2:24007 gluster-server-3:24007 
+[2023-02-17 23:40:05.143386 +0000] I [glusterfsd-mgmt.c:2236:mgmt_getspec_cbk] 0-glusterfs: No change in volfile,continuing
+[2023-02-17 23:40:06.720955 +0000] I [glusterfsd-mgmt.c:77:mgmt_cbk_spec] 0-mgmt: Volume file changed
+[2023-02-17 23:40:07.160768 +0000] I [glusterfsd-mgmt.c:2203:mgmt_getspec_cbk] 0-glusterfs: Received list of available volfile servers: gluster-server-2:24007 gluster-server-3:24007 
+[2023-02-17 23:40:07.160796 +0000] I [glusterfsd-mgmt.c:2236:mgmt_getspec_cbk] 0-glusterfs: No change in volfile,continuing
+[2023-02-17 23:40:07.925398 +0000] I [glusterfsd-mgmt.c:77:mgmt_cbk_spec] 0-mgmt: Volume file changed
+[2023-02-17 23:40:08.366084 +0000] I [glusterfsd-mgmt.c:2203:mgmt_getspec_cbk] 0-glusterfs: Received list of available volfile servers: gluster-server-2:24007 gluster-server-3:24007 
+[2023-02-17 23:40:08.366133 +0000] I [glusterfsd-mgmt.c:2236:mgmt_getspec_cbk] 0-glusterfs: No change in volfile,continuing
+[2023-02-17 23:40:09.132926 +0000] I [glusterfsd-mgmt.c:77:mgmt_cbk_spec] 0-mgmt: Volume file changed
+[2023-02-17 23:40:09.580645 +0000] I [glusterfsd-mgmt.c:2203:mgmt_getspec_cbk] 0-glusterfs: Received list of available volfile servers: gluster-server-2:24007 gluster-server-3:24007 
+[2023-02-17 23:40:09.581205 +0000] I [addr.c:52:compare_addr_and_update] 0-/gluster/brick12/test-volume: allowed = "*", received addr = "192.168.123.8"
+[2023-02-17 23:40:09.581219 +0000] I [login.c:109:gf_auth] 0-auth/login: allowed user names: dec13ccf-6b50-4f01-b65d-72bb74f7892a
+[2023-02-17 23:40:09.581231 +0000] I [addr.c:52:compare_addr_and_update] 0-/gluster/brick12/test-volume: allowed = "*", received addr = "192.168.123.7"
+[2023-02-17 23:40:09.581238 +0000] I [login.c:109:gf_auth] 0-auth/login: allowed user names: dec13ccf-6b50-4f01-b65d-72bb74f7892a
+[2023-02-17 23:40:09.581247 +0000] I [addr.c:52:compare_addr_and_update] 0-/gluster/brick12/test-volume: allowed = "*", received addr = "192.168.123.6"
+[2023-02-17 23:40:09.581253 +0000] I [login.c:109:gf_auth] 0-auth/login: allowed user names: dec13ccf-6b50-4f01-b65d-72bb74f7892a
+The message "I [MSGID: 101221] [common-utils.c:3836:gf_set_volfile_server_common] 0-gluster: duplicate entry for volfile-server [{errno=17}, {error=File exists}]" repeated 11 times between [2023-02-17 23:40:01.207578 +0000] and [2023-02-17 23:40:09.580672 +0000]
+[2023-02-17 23:40:09.581290 +0000] I [MSGID: 0] [options.c:1246:xlator_option_reconf_int32] 0-test-volume-posix: option brick-uid using set value 1000 
+[2023-02-17 23:40:09.581467 +0000] I [MSGID: 0] [options.c:1246:xlator_option_reconf_int32] 0-test-volume-posix: option shared-brick-count using set value 1 
+[2023-02-17 23:40:09.581520 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-posix: option fips-mode-rchecksum using set value on 
+[2023-02-17 23:40:09.581538 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-trash: option trash-internal-op using set value off 
+[2023-02-17 23:40:09.581547 +0000] I [MSGID: 0] [options.c:1242:xlator_option_reconf_str] 0-test-volume-trash: option trash-dir using set value .trashcan 
+[2023-02-17 23:40:09.581560 +0000] I [MSGID: 0] [options.c:1242:xlator_option_reconf_str] 0-test-volume-changelog: option changelog-dir using set value /gluster/brick12/test-volume/.glusterfs/changelogs 
+[2023-02-17 23:40:09.581595 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-changelog: option changelog-notification using set value off 
+[2023-02-17 23:40:09.581613 +0000] I [MSGID: 0] [options.c:1255:xlator_option_reconf_time] 0-test-volume-changelog: option changelog-barrier-timeout using set value 120 
+[2023-02-17 23:40:09.581625 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-bitrot-stub: option bitrot using set value disable 
+[2023-02-17 23:40:09.581651 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-locks: option enforce-mandatory-lock using set value off 
+[2023-02-17 23:40:09.581659 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-worm: option worm using set value off 
+[2023-02-17 23:40:09.581667 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-worm: option worm-file-level using set value off 
+[2023-02-17 23:40:09.581680 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-worm: option worm-files-deletable using set value on 
+[2023-02-17 23:40:09.581687 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-read-only: option read-only using set value off 
+[2023-02-17 23:40:09.581698 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-upcall: option cache-invalidation using set value on 
+[2023-02-17 23:40:09.581705 +0000] I [MSGID: 0] [options.c:1255:xlator_option_reconf_time] 0-test-volume-upcall: option cache-invalidation-timeout using set value 600 
+[2023-02-17 23:40:09.581730 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-selinux: option selinux using set value on 
+[2023-02-17 23:40:09.581740 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-barrier: option barrier using set value disable 
+[2023-02-17 23:40:09.581747 +0000] I [MSGID: 0] [options.c:1255:xlator_option_reconf_time] 0-test-volume-barrier: option barrier-timeout using set value 120 
+[2023-02-17 23:40:09.581756 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-quota: option deem-statfs using set value off 
+[2023-02-17 23:40:09.581763 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-quota: option server-quota using set value off 
+[2023-02-17 23:40:09.581783 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-/gluster/brick12/test-volume: option count-fop-hits using set value off 
+[2023-02-17 23:40:09.581791 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-/gluster/brick12/test-volume: option latency-measurement using set value off 
+[2023-02-17 23:40:09.581803 +0000] I [io-stats.c:3701:ios_sample_buf_size_configure] 0-/gluster/brick12/test-volume: Configure ios_sample_buf  size is 1024 because ios_sample_interval is 0
+[2023-02-17 23:40:09.581819 +0000] I [MSGID: 0] [options.c:1242:xlator_option_reconf_str] 0-/gluster/brick12/test-volume: option log-level using set value INFO 
+[2023-02-17 23:40:09.581846 +0000] I [MSGID: 0] [options.c:1246:xlator_option_reconf_int32] 0-/gluster/brick12/test-volume: option threads using set value 16 
+[2023-02-17 23:40:10.343432 +0000] I [glusterfsd-mgmt.c:77:mgmt_cbk_spec] 0-mgmt: Volume file changed
+[2023-02-17 23:40:10.782780 +0000] I [glusterfsd-mgmt.c:2203:mgmt_getspec_cbk] 0-glusterfs: Received list of available volfile servers: gluster-server-2:24007 gluster-server-3:24007 
+[2023-02-17 23:40:10.782801 +0000] I [MSGID: 101221] [common-utils.c:3836:gf_set_volfile_server_common] 0-gluster: duplicate entry for volfile-server [{errno=17}, {error=File exists}] 
+[2023-02-17 23:40:10.783529 +0000] I [addr.c:52:compare_addr_and_update] 0-/gluster/brick12/test-volume: allowed = "*", received addr = "192.168.123.8"
+[2023-02-17 23:40:10.783541 +0000] I [login.c:109:gf_auth] 0-auth/login: allowed user names: dec13ccf-6b50-4f01-b65d-72bb74f7892a
+[2023-02-17 23:40:10.783553 +0000] I [addr.c:52:compare_addr_and_update] 0-/gluster/brick12/test-volume: allowed = "*", received addr = "192.168.123.7"
+[2023-02-17 23:40:10.783560 +0000] I [login.c:109:gf_auth] 0-auth/login: allowed user names: dec13ccf-6b50-4f01-b65d-72bb74f7892a
+[2023-02-17 23:40:10.783569 +0000] I [addr.c:52:compare_addr_and_update] 0-/gluster/brick12/test-volume: allowed = "*", received addr = "192.168.123.6"
+[2023-02-17 23:40:10.783575 +0000] I [login.c:109:gf_auth] 0-auth/login: allowed user names: dec13ccf-6b50-4f01-b65d-72bb74f7892a
+[2023-02-17 23:40:10.782813 +0000] I [MSGID: 101221] [common-utils.c:3836:gf_set_volfile_server_common] 0-gluster: duplicate entry for volfile-server [{errno=17}, {error=File exists}] 
+[2023-02-17 23:40:10.783605 +0000] I [MSGID: 0] [options.c:1246:xlator_option_reconf_int32] 0-test-volume-posix: option brick-uid using set value 1000 
+[2023-02-17 23:40:10.783622 +0000] I [MSGID: 0] [options.c:1246:xlator_option_reconf_int32] 0-test-volume-posix: option brick-gid using set value 1000 
+[2023-02-17 23:40:10.783783 +0000] I [MSGID: 0] [options.c:1246:xlator_option_reconf_int32] 0-test-volume-posix: option shared-brick-count using set value 1 
+[2023-02-17 23:40:10.783832 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-posix: option fips-mode-rchecksum using set value on 
+[2023-02-17 23:40:10.783848 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-trash: option trash-internal-op using set value off 
+[2023-02-17 23:40:10.783856 +0000] I [MSGID: 0] [options.c:1242:xlator_option_reconf_str] 0-test-volume-trash: option trash-dir using set value .trashcan 
+[2023-02-17 23:40:10.783869 +0000] I [MSGID: 0] [options.c:1242:xlator_option_reconf_str] 0-test-volume-changelog: option changelog-dir using set value /gluster/brick12/test-volume/.glusterfs/changelogs 
+[2023-02-17 23:40:10.783904 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-changelog: option changelog-notification using set value off 
+[2023-02-17 23:40:10.783921 +0000] I [MSGID: 0] [options.c:1255:xlator_option_reconf_time] 0-test-volume-changelog: option changelog-barrier-timeout using set value 120 
+[2023-02-17 23:40:10.783932 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-bitrot-stub: option bitrot using set value disable 
+[2023-02-17 23:40:10.783957 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-locks: option enforce-mandatory-lock using set value off 
+[2023-02-17 23:40:10.783964 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-worm: option worm using set value off 
+[2023-02-17 23:40:10.783972 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-worm: option worm-file-level using set value off 
+[2023-02-17 23:40:10.783985 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-worm: option worm-files-deletable using set value on 
+[2023-02-17 23:40:10.783998 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-read-only: option read-only using set value off 
+[2023-02-17 23:40:10.784008 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-upcall: option cache-invalidation using set value on 
+[2023-02-17 23:40:10.784015 +0000] I [MSGID: 0] [options.c:1255:xlator_option_reconf_time] 0-test-volume-upcall: option cache-invalidation-timeout using set value 600 
+[2023-02-17 23:40:10.784040 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-selinux: option selinux using set value on 
+[2023-02-17 23:40:10.784049 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-barrier: option barrier using set value disable 
+[2023-02-17 23:40:10.784056 +0000] I [MSGID: 0] [options.c:1255:xlator_option_reconf_time] 0-test-volume-barrier: option barrier-timeout using set value 120 
+[2023-02-17 23:40:10.784065 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-quota: option deem-statfs using set value off 
+[2023-02-17 23:40:10.784072 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-test-volume-quota: option server-quota using set value off 
+[2023-02-17 23:40:10.784091 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-/gluster/brick12/test-volume: option count-fop-hits using set value off 
+[2023-02-17 23:40:10.784099 +0000] I [MSGID: 0] [options.c:1251:xlator_option_reconf_bool] 0-/gluster/brick12/test-volume: option latency-measurement using set value off 
+[2023-02-17 23:40:10.784111 +0000] I [io-stats.c:3701:ios_sample_buf_size_configure] 0-/gluster/brick12/test-volume: Configure ios_sample_buf  size is 1024 because ios_sample_interval is 0
+[2023-02-17 23:40:10.784122 +0000] I [MSGID: 0] [options.c:1242:xlator_option_reconf_str] 0-/gluster/brick12/test-volume: option log-level using set value INFO 
+[2023-02-17 23:40:10.784151 +0000] I [MSGID: 0] [options.c:1246:xlator_option_reconf_int32] 0-/gluster/brick12/test-volume: option threads using set value 16 
+[2023-02-17 23:40:19.764228 +0000] I [addr.c:52:compare_addr_and_update] 0-/gluster/brick12/test-volume: allowed = "*", received addr = "192.168.123.5"
+[2023-02-17 23:40:19.764255 +0000] I [MSGID: 115029] [server-handshake.c:565:server_setvolume] 0-test-volume-server: accepted client from CTX_ID:75372402-9c58-4a42-8278-636217770e7b-GRAPH_ID:0-PID:2022-HOST:gluster-client-1-PC_NAME:test-volume-client-33-RECON_NO:-0 (version: 10.1) with subvol /gluster/brick12/test-volume 

@@ -1,0 +1,5 @@
+[2023-02-17 23:39:43.183696 +0000] I [cli.c:828:main] 0-cli: Started running gluster with version 10.1
+[2023-02-17 23:39:43.237635 +0000] I [MSGID: 101190] [event-epoll.c:667:event_dispatch_epoll_worker] 0-epoll: Started thread with index [{index=0}] 
+[2023-02-17 23:39:43.237708 +0000] I [MSGID: 101190] [event-epoll.c:667:event_dispatch_epoll_worker] 0-epoll: Started thread with index [{index=1}] 
+[2023-02-17 23:39:43.238344 +0000] I [cli-rpc-ops.c:162:gf_cli_probe_cbk] 0-cli: Received resp to probe
+[2023-02-17 23:39:43.238504 +0000] I [input.c:31:cli_batch] 0-: Exiting with: 0

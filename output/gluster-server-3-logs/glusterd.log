@@ -1,0 +1,415 @@
+[2023-02-17 23:39:36.223409 +0000] I [MSGID: 100030] [glusterfsd.c:2767:main] 0-/usr/sbin/glusterd: Started running version [{arg=/usr/sbin/glusterd}, {version=10.1}, {cmdlinestr=/usr/sbin/glusterd -p /var/run/glusterd.pid --log-level INFO}] 
+[2023-02-17 23:39:36.223860 +0000] I [glusterfsd.c:2447:daemonize] 0-glusterfs: Pid of current running process is 5484
+[2023-02-17 23:39:36.244356 +0000] I [MSGID: 106478] [glusterd.c:1470:init] 0-management: Maximum allowed open file descriptors set to 65536 
+[2023-02-17 23:39:36.244388 +0000] I [MSGID: 106479] [glusterd.c:1560:init] 0-management: Using /var/lib/glusterd as working directory 
+[2023-02-17 23:39:36.244396 +0000] I [MSGID: 106479] [glusterd.c:1564:init] 0-management: Using /var/run/gluster as pid file working directory 
+[2023-02-17 23:39:36.246269 +0000] I [socket.c:972:__socket_server_bind] 0-socket.management: process started listening on port (24007)
+[2023-02-17 23:39:36.247074 +0000] I [socket.c:915:__socket_server_bind] 0-socket.management: closing (AF_UNIX) reuse check socket 12
+[2023-02-17 23:39:36.247257 +0000] I [MSGID: 106059] [glusterd.c:1952:init] 0-management: max-port override: 60999 
+[2023-02-17 23:39:36.307577 +0000] E [MSGID: 106061] [glusterd.c:590:glusterd_crt_georep_folders] 0-glusterd: Dict get failed [{Key=log-group}, {errno=2}, {error=No such file or directory}] 
+[2023-02-17 23:39:37.473465 +0000] E [MSGID: 101032] [store.c:461:gf_store_handle_retrieve] 0-: Path corresponding to /var/lib/glusterd/glusterd.info. [No such file or directory]
+[2023-02-17 23:39:37.473517 +0000] E [MSGID: 101032] [store.c:461:gf_store_handle_retrieve] 0-: Path corresponding to /var/lib/glusterd/glusterd.info. [No such file or directory]
+[2023-02-17 23:39:37.473518 +0000] I [MSGID: 106514] [glusterd-store.c:2153:glusterd_restore_op_version] 0-management: Detected new install. Setting op-version to maximum : 100000 
+[2023-02-17 23:39:37.473540 +0000] E [MSGID: 101032] [store.c:461:gf_store_handle_retrieve] 0-: Path corresponding to /var/lib/glusterd/options. [No such file or directory]
+[2023-02-17 23:39:37.494750 +0000] I [MSGID: 106194] [glusterd-store.c:3980:glusterd_store_retrieve_missed_snaps_list] 0-management: No missed snaps list. 
+[2023-02-17 23:39:37.494784 +0000] E [MSGID: 101032] [store.c:461:gf_store_handle_retrieve] 0-: Path corresponding to /var/lib/glusterd/glusterd.upgrade. [No such file or directory]
+[2023-02-17 23:39:37.494801 +0000] I [glusterd.c:2090:init] 0-management: Regenerating volfiles due to a max op-version mismatch or glusterd.upgrade file not being present, op_version retrieved:0, max op_version: 100000
+Final graph:
++------------------------------------------------------------------------------+
+  1: volume management
+  2:     type mgmt/glusterd
+  3:     option rpc-auth.auth-glusterfs on
+  4:     option rpc-auth.auth-unix on
+  5:     option rpc-auth.auth-null on
+  6:     option rpc-auth-allow-insecure on
+  7:     option transport.listen-backlog 1024
+  8:     option max-port 60999
+  9:     option event-threads 1
+ 10:     option ping-timeout 0
+ 11:     option transport.socket.listen-port 24007
+ 12:     option transport.socket.read-fail-log off
+ 13:     option transport.socket.keepalive-interval 2
+ 14:     option transport.socket.keepalive-time 10
+ 15:     option transport-type socket
+ 16:     option working-directory /var/lib/glusterd
+ 17: end-volume
+ 18:  
++------------------------------------------------------------------------------+
+[2023-02-17 23:39:37.521505 +0000] I [MSGID: 101190] [event-epoll.c:667:event_dispatch_epoll_worker] 0-epoll: Started thread with index [{index=0}] 
+[2023-02-17 23:39:42.054551 +0000] I [MSGID: 106163] [glusterd-handshake.c:1501:__glusterd_mgmt_hndsk_versions_ack] 0-management: using the op-version 100000 
+[2023-02-17 23:39:42.054598 +0000] E [MSGID: 101032] [store.c:461:gf_store_handle_retrieve] 0-: Path corresponding to /var/lib/glusterd/glusterd.info. [No such file or directory]
+[2023-02-17 23:39:42.054624 +0000] I [MSGID: 106477] [glusterd.c:180:glusterd_uuid_generate_save] 0-management: generated UUID: 4ed3138b-baff-4fa7-b8f1-17555e0f5d37 
+[2023-02-17 23:39:42.095322 +0000] I [MSGID: 106490] [glusterd-handler.c:2902:__glusterd_handle_probe_query] 0-glusterd: Received probe from uuid: d56df5e3-309c-4f3d-9697-a63fb632e73e 
+[2023-02-17 23:39:42.095553 +0000] I [MSGID: 106128] [glusterd-handler.c:2935:__glusterd_handle_probe_query] 0-glusterd: Unable to find peerinfo for host: gluster-server-1 (24007) 
+[2023-02-17 23:39:42.113453 +0000] W [MSGID: 106061] [glusterd-handler.c:3424:glusterd_transport_inet_options_build] 0-glusterd: Failed to get tcp-user-timeout 
+[2023-02-17 23:39:42.113491 +0000] I [rpc-clnt.c:1011:rpc_clnt_connection_init] 0-management: setting frame-timeout to 600
+[2023-02-17 23:39:42.113983 +0000] I [MSGID: 106498] [glusterd-handler.c:3583:glusterd_friend_add] 0-management: connect returned 0 
+[2023-02-17 23:39:42.114028 +0000] I [MSGID: 106493] [glusterd-handler.c:2961:__glusterd_handle_probe_query] 0-glusterd: Responded to gluster-server-1, op_ret: 0, op_errno: 0, ret: 0 
+[2023-02-17 23:39:42.114429 +0000] I [MSGID: 106490] [glusterd-handler.c:2546:__glusterd_handle_incoming_friend_req] 0-glusterd: Received probe from uuid: d56df5e3-309c-4f3d-9697-a63fb632e73e 
+[2023-02-17 23:39:42.143868 +0000] I [MSGID: 106493] [glusterd-handler.c:3819:glusterd_xfer_friend_add_resp] 0-glusterd: Responded to gluster-server-1 (0), ret: 0, op_ret: 0 
+[2023-02-17 23:39:42.218628 +0000] I [MSGID: 106511] [glusterd-rpc-ops.c:248:__glusterd_probe_cbk] 0-management: Received probe resp from uuid: d56df5e3-309c-4f3d-9697-a63fb632e73e, host: gluster-server-1 
+[2023-02-17 23:39:42.218669 +0000] I [MSGID: 106511] [glusterd-rpc-ops.c:404:__glusterd_probe_cbk] 0-glusterd: Received resp to probe req 
+[2023-02-17 23:39:42.238563 +0000] I [MSGID: 106493] [glusterd-rpc-ops.c:467:__glusterd_friend_add_cbk] 0-glusterd: Received ACC from uuid: d56df5e3-309c-4f3d-9697-a63fb632e73e, host: gluster-server-1, port: 0 
+[2023-02-17 23:39:42.262274 +0000] I [MSGID: 106492] [glusterd-handler.c:2729:__glusterd_handle_friend_update] 0-glusterd: Received friend update from uuid: d56df5e3-309c-4f3d-9697-a63fb632e73e 
+[2023-02-17 23:39:42.286377 +0000] W [MSGID: 106061] [glusterd-handler.c:3424:glusterd_transport_inet_options_build] 0-glusterd: Failed to get tcp-user-timeout 
+[2023-02-17 23:39:42.286445 +0000] I [rpc-clnt.c:1011:rpc_clnt_connection_init] 0-management: setting frame-timeout to 600
+[2023-02-17 23:39:42.286901 +0000] I [MSGID: 106498] [glusterd-handler.c:3631:glusterd_friend_add_from_peerinfo] 0-management: connect returned 0 
+[2023-02-17 23:39:42.286920 +0000] I [MSGID: 106502] [glusterd-handler.c:2776:__glusterd_handle_friend_update] 0-management: Received my uuid as Friend 
+[2023-02-17 23:39:42.286992 +0000] I [MSGID: 106493] [glusterd-rpc-ops.c:681:__glusterd_friend_update_cbk] 0-management: Received ACC from uuid: d56df5e3-309c-4f3d-9697-a63fb632e73e 
+[2023-02-17 23:39:42.321385 +0000] I [MSGID: 106163] [glusterd-handshake.c:1501:__glusterd_mgmt_hndsk_versions_ack] 0-management: using the op-version 100000 
+[2023-02-17 23:39:42.350237 +0000] I [MSGID: 106493] [glusterd-rpc-ops.c:467:__glusterd_friend_add_cbk] 0-glusterd: Received ACC from uuid: 58c41ec2-381a-469b-a9b7-86eca4fe36e9, host: gluster-server-2, port: 0 
+[2023-02-17 23:39:42.365819 +0000] I [MSGID: 106490] [glusterd-handler.c:2546:__glusterd_handle_incoming_friend_req] 0-glusterd: Received probe from uuid: 58c41ec2-381a-469b-a9b7-86eca4fe36e9 
+[2023-02-17 23:39:42.383430 +0000] I [MSGID: 106493] [glusterd-handler.c:3819:glusterd_xfer_friend_add_resp] 0-glusterd: Responded to gluster-server-2 (0), ret: 0, op_ret: 0 
+[2023-02-17 23:39:42.424579 +0000] I [MSGID: 106493] [glusterd-rpc-ops.c:681:__glusterd_friend_update_cbk] 0-management: Received ACC from uuid: 58c41ec2-381a-469b-a9b7-86eca4fe36e9 
+[2023-02-17 23:39:42.424605 +0000] I [MSGID: 106492] [glusterd-handler.c:2729:__glusterd_handle_friend_update] 0-glusterd: Received friend update from uuid: 58c41ec2-381a-469b-a9b7-86eca4fe36e9 
+[2023-02-17 23:39:42.444407 +0000] I [MSGID: 106502] [glusterd-handler.c:2776:__glusterd_handle_friend_update] 0-management: Received my uuid as Friend 
+[2023-02-17 23:39:42.446968 +0000] I [MSGID: 106493] [glusterd-rpc-ops.c:681:__glusterd_friend_update_cbk] 0-management: Received ACC from uuid: 58c41ec2-381a-469b-a9b7-86eca4fe36e9 
+[2023-02-17 23:39:43.237985 +0000] I [MSGID: 106487] [glusterd-handler.c:1133:__glusterd_handle_cli_probe] 0-glusterd: Received CLI probe req gluster-server-1 24007 
+[2023-02-17 23:39:45.462590 +0000] W [MSGID: 101095] [xlator.c:213:xlator_volopt_dynload] 0-xlator: DL open failed [{error=/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/nfs/server.so: cannot open shared object file: No such file or directory}] 
+[2023-02-17 23:39:46.816949 +0000] I [run.c:259:runner_log] (-->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0xc8e28) [0x7f9df43bce28] -->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0x11e4ec) [0x7f9df44124ec] -->/lib/x86_64-linux-gnu/libglusterfs.so.0(runner_log+0x110) [0x7f9df90fa010] ) 0-management: Ran script: /var/lib/glusterd/hooks/1/create/post/S10selinux-label-brick.sh --volname=test-volume 
+[2023-02-17 23:39:49.497757 +0000] I [MSGID: 106061] [glusterd-volume-ops.c:2378:glusterd_op_start_volume] 0-management: Global dict not present. 
+[2023-02-17 23:39:49.497816 +0000] I [glusterd-utils.c:6911:glusterd_brick_start] 0-management: starting a fresh brick process for brick /gluster/brick1/test-volume
+[2023-02-17 23:39:49.504362 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick1-test-volume 
+[2023-02-17 23:39:49.570215 +0000] I [rpc-clnt.c:1011:rpc_clnt_connection_init] 0-management: setting frame-timeout to 600
+[2023-02-17 23:39:49.570462 +0000] I [glusterd-utils.c:6911:glusterd_brick_start] 0-management: starting a fresh brick process for brick /gluster/brick2/test-volume
+[2023-02-17 23:39:49.578075 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick2-test-volume 
+[2023-02-17 23:39:49.638123 +0000] I [rpc-clnt.c:1011:rpc_clnt_connection_init] 0-management: setting frame-timeout to 600
+[2023-02-17 23:39:49.638309 +0000] I [glusterd-utils.c:6911:glusterd_brick_start] 0-management: starting a fresh brick process for brick /gluster/brick3/test-volume
+[2023-02-17 23:39:49.645079 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick3-test-volume 
+[2023-02-17 23:39:49.701893 +0000] I [rpc-clnt.c:1011:rpc_clnt_connection_init] 0-management: setting frame-timeout to 600
+[2023-02-17 23:39:49.702041 +0000] I [glusterd-utils.c:6911:glusterd_brick_start] 0-management: starting a fresh brick process for brick /gluster/brick4/test-volume
+[2023-02-17 23:39:49.708604 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick4-test-volume 
+[2023-02-17 23:39:49.765998 +0000] I [rpc-clnt.c:1011:rpc_clnt_connection_init] 0-management: setting frame-timeout to 600
+[2023-02-17 23:39:49.766162 +0000] I [glusterd-utils.c:6911:glusterd_brick_start] 0-management: starting a fresh brick process for brick /gluster/brick5/test-volume
+[2023-02-17 23:39:49.773041 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick5-test-volume 
+[2023-02-17 23:39:49.829973 +0000] I [rpc-clnt.c:1011:rpc_clnt_connection_init] 0-management: setting frame-timeout to 600
+[2023-02-17 23:39:49.830137 +0000] I [glusterd-utils.c:6911:glusterd_brick_start] 0-management: starting a fresh brick process for brick /gluster/brick6/test-volume
+[2023-02-17 23:39:49.836861 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick6-test-volume 
+[2023-02-17 23:39:49.882155 +0000] I [rpc-clnt.c:1011:rpc_clnt_connection_init] 0-management: setting frame-timeout to 600
+[2023-02-17 23:39:49.882333 +0000] I [glusterd-utils.c:6911:glusterd_brick_start] 0-management: starting a fresh brick process for brick /gluster/brick7/test-volume
+[2023-02-17 23:39:49.888681 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick7-test-volume 
+[2023-02-17 23:39:49.946048 +0000] I [rpc-clnt.c:1011:rpc_clnt_connection_init] 0-management: setting frame-timeout to 600
+[2023-02-17 23:39:49.946197 +0000] I [glusterd-utils.c:6911:glusterd_brick_start] 0-management: starting a fresh brick process for brick /gluster/brick8/test-volume
+[2023-02-17 23:39:49.952977 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick8-test-volume 
+[2023-02-17 23:39:50.010139 +0000] I [rpc-clnt.c:1011:rpc_clnt_connection_init] 0-management: setting frame-timeout to 600
+[2023-02-17 23:39:50.010311 +0000] I [glusterd-utils.c:6911:glusterd_brick_start] 0-management: starting a fresh brick process for brick /gluster/brick9/test-volume
+[2023-02-17 23:39:50.017532 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick9-test-volume 
+[2023-02-17 23:39:50.070164 +0000] I [rpc-clnt.c:1011:rpc_clnt_connection_init] 0-management: setting frame-timeout to 600
+[2023-02-17 23:39:50.070352 +0000] I [glusterd-utils.c:6911:glusterd_brick_start] 0-management: starting a fresh brick process for brick /gluster/brick10/test-volume
+[2023-02-17 23:39:50.077531 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick10-test-volume 
+[2023-02-17 23:39:50.129974 +0000] I [rpc-clnt.c:1011:rpc_clnt_connection_init] 0-management: setting frame-timeout to 600
+[2023-02-17 23:39:50.130129 +0000] I [glusterd-utils.c:6911:glusterd_brick_start] 0-management: starting a fresh brick process for brick /gluster/brick11/test-volume
+[2023-02-17 23:39:50.137630 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick11-test-volume 
+[2023-02-17 23:39:50.194052 +0000] I [rpc-clnt.c:1011:rpc_clnt_connection_init] 0-management: setting frame-timeout to 600
+[2023-02-17 23:39:50.194207 +0000] I [glusterd-utils.c:6911:glusterd_brick_start] 0-management: starting a fresh brick process for brick /gluster/brick12/test-volume
+[2023-02-17 23:39:50.200933 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick12-test-volume 
+[2023-02-17 23:39:50.257960 +0000] I [rpc-clnt.c:1011:rpc_clnt_connection_init] 0-management: setting frame-timeout to 600
+[2023-02-17 23:39:50.258113 +0000] I [glusterd-utils.c:6911:glusterd_brick_start] 0-management: starting a fresh brick process for brick /gluster/brick13/test-volume
+[2023-02-17 23:39:50.264977 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick13-test-volume 
+[2023-02-17 23:39:50.322007 +0000] I [rpc-clnt.c:1011:rpc_clnt_connection_init] 0-management: setting frame-timeout to 600
+[2023-02-17 23:39:50.322195 +0000] I [glusterd-utils.c:6911:glusterd_brick_start] 0-management: starting a fresh brick process for brick /gluster/brick14/test-volume
+[2023-02-17 23:39:50.329529 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick14-test-volume 
+[2023-02-17 23:39:50.385972 +0000] I [rpc-clnt.c:1011:rpc_clnt_connection_init] 0-management: setting frame-timeout to 600
+[2023-02-17 23:39:50.386130 +0000] I [glusterd-utils.c:6911:glusterd_brick_start] 0-management: starting a fresh brick process for brick /gluster/brick15/test-volume
+[2023-02-17 23:39:50.393304 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick15-test-volume 
+[2023-02-17 23:39:50.442020 +0000] I [rpc-clnt.c:1011:rpc_clnt_connection_init] 0-management: setting frame-timeout to 600
+[2023-02-17 23:39:51.355235 +0000] I [rpc-clnt.c:1011:rpc_clnt_connection_init] 0-snapd: setting frame-timeout to 600
+[2023-02-17 23:39:51.355490 +0000] I [rpc-clnt.c:1011:rpc_clnt_connection_init] 0-gfproxyd: setting frame-timeout to 600
+[2023-02-17 23:39:51.355649 +0000] I [rpc-clnt.c:1011:rpc_clnt_connection_init] 0-quotad: setting frame-timeout to 600
+[2023-02-17 23:39:51.355787 +0000] I [rpc-clnt.c:1011:rpc_clnt_connection_init] 0-bitd: setting frame-timeout to 600
+[2023-02-17 23:39:51.355883 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: bitd already stopped 
+[2023-02-17 23:39:51.355898 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: bitd service is stopped 
+[2023-02-17 23:39:51.381075 +0000] I [rpc-clnt.c:1011:rpc_clnt_connection_init] 0-glustershd: setting frame-timeout to 600
+[2023-02-17 23:39:52.383210 +0000] I [rpc-clnt.c:1011:rpc_clnt_connection_init] 0-scrub: setting frame-timeout to 600
+[2023-02-17 23:39:52.383386 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: scrub already stopped 
+[2023-02-17 23:39:52.383403 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: scrub service is stopped 
+[2023-02-17 23:39:52.384180 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume shd/test-volume 
+[2023-02-17 23:39:52.403908 +0000] I [run.c:259:runner_log] (-->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0xc8e28) [0x7f9df43bce28] -->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0x11e4ec) [0x7f9df44124ec] -->/lib/x86_64-linux-gnu/libglusterfs.so.0(runner_log+0x110) [0x7f9df90fa010] ) 0-management: Ran script: /var/lib/glusterd/hooks/1/start/post/S29CTDBsetup.sh --volname=test-volume --first=yes --version=1 --volume-op=start --gd-workdir=/var/lib/glusterd 
+[2023-02-17 23:39:52.427048 +0000] I [run.c:259:runner_log] (-->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0xc8e28) [0x7f9df43bce28] -->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0x11e4ec) [0x7f9df44124ec] -->/lib/x86_64-linux-gnu/libglusterfs.so.0(runner_log+0x110) [0x7f9df90fa010] ) 0-management: Ran script: /var/lib/glusterd/hooks/1/start/post/S30samba-start.sh --volname=test-volume --first=yes --version=1 --volume-op=start --gd-workdir=/var/lib/glusterd 
+[2023-02-17 23:39:52.445630 +0000] I [run.c:259:runner_log] (-->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0xc8e28) [0x7f9df43bce28] -->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0x11e4ec) [0x7f9df44124ec] -->/lib/x86_64-linux-gnu/libglusterfs.so.0(runner_log+0x110) [0x7f9df90fa010] ) 0-management: Ran script: /var/lib/glusterd/hooks/1/start/post/S31ganesha-start.sh --volname=test-volume --first=yes --version=1 --volume-op=start --gd-workdir=/var/lib/glusterd 
+[2023-02-17 23:39:53.112155 +0000] E [MSGID: 106061] [glusterd-op-sm.c:1112:glusterd_op_stage_set_volume] 0-management: Dict get failed [{Key=key2}, {errno=2}, {error=No such file or directory}] 
+[2023-02-17 23:39:53.806590 +0000] W [MSGID: 101095] [xlator.c:213:xlator_volopt_dynload] 0-xlator: DL open failed [{error=/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/nfs/server.so: cannot open shared object file: No such file or directory}] 
+[2023-02-17 23:39:54.771923 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: quotad already stopped 
+[2023-02-17 23:39:54.771954 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: quotad service is stopped 
+[2023-02-17 23:39:54.772049 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: bitd already stopped 
+[2023-02-17 23:39:54.772067 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: bitd service is stopped 
+[2023-02-17 23:39:54.772119 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: scrub already stopped 
+[2023-02-17 23:39:54.772127 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: scrub service is stopped 
+[2023-02-17 23:39:54.772432 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick1-test-volume 
+[2023-02-17 23:39:54.772591 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick6-test-volume 
+[2023-02-17 23:39:54.772644 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick4-test-volume 
+[2023-02-17 23:39:54.772715 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick2-test-volume 
+[2023-02-17 23:39:54.772766 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick7-test-volume 
+[2023-02-17 23:39:54.772811 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick5-test-volume 
+[2023-02-17 23:39:54.772856 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick8-test-volume 
+[2023-02-17 23:39:54.772897 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick3-test-volume 
+[2023-02-17 23:39:54.772945 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick11-test-volume 
+[2023-02-17 23:39:54.772988 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick13-test-volume 
+[2023-02-17 23:39:54.773032 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick12-test-volume 
+[2023-02-17 23:39:54.773076 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick14-test-volume 
+[2023-02-17 23:39:54.773120 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick9-test-volume 
+[2023-02-17 23:39:54.773162 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick15-test-volume 
+[2023-02-17 23:39:54.773205 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick10-test-volume 
+[2023-02-17 23:39:54.773248 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume shd/test-volume 
+[2023-02-17 23:39:54.781063 +0000] I [run.c:259:runner_log] (-->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0xc8e28) [0x7f9df43bce28] -->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0x11e4ec) [0x7f9df44124ec] -->/lib/x86_64-linux-gnu/libglusterfs.so.0(runner_log+0x110) [0x7f9df90fa010] ) 0-management: Ran script: /var/lib/glusterd/hooks/1/set/post/S30samba-set.sh --volname=test-volume -o cluster.rebal-throttle=lazy --gd-workdir=/var/lib/glusterd 
+[2023-02-17 23:39:54.785361 +0000] I [run.c:259:runner_log] (-->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0xc8e28) [0x7f9df43bce28] -->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0x11e4ec) [0x7f9df44124ec] -->/lib/x86_64-linux-gnu/libglusterfs.so.0(runner_log+0x110) [0x7f9df90fa010] ) 0-management: Ran script: /var/lib/glusterd/hooks/1/set/post/S32gluster_enable_shared_storage.sh --volname=test-volume -o cluster.rebal-throttle=lazy --gd-workdir=/var/lib/glusterd 
+[2023-02-17 23:39:54.972708 +0000] E [MSGID: 106061] [glusterd-op-sm.c:1112:glusterd_op_stage_set_volume] 0-management: Dict get failed [{Key=key2}, {errno=2}, {error=No such file or directory}] 
+[2023-02-17 23:39:55.652589 +0000] W [MSGID: 101095] [xlator.c:213:xlator_volopt_dynload] 0-xlator: DL open failed [{error=/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/nfs/server.so: cannot open shared object file: No such file or directory}] 
+[2023-02-17 23:39:56.627379 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: quotad already stopped 
+[2023-02-17 23:39:56.627404 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: quotad service is stopped 
+[2023-02-17 23:39:56.627466 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: bitd already stopped 
+[2023-02-17 23:39:56.627474 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: bitd service is stopped 
+[2023-02-17 23:39:56.627529 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: scrub already stopped 
+[2023-02-17 23:39:56.627537 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: scrub service is stopped 
+[2023-02-17 23:39:56.627836 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick2-test-volume 
+[2023-02-17 23:39:56.627953 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick1-test-volume 
+[2023-02-17 23:39:56.628005 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick3-test-volume 
+[2023-02-17 23:39:56.628098 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick4-test-volume 
+[2023-02-17 23:39:56.628145 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick5-test-volume 
+[2023-02-17 23:39:56.628191 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick8-test-volume 
+[2023-02-17 23:39:56.628235 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick6-test-volume 
+[2023-02-17 23:39:56.628278 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick9-test-volume 
+[2023-02-17 23:39:56.628325 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick10-test-volume 
+[2023-02-17 23:39:56.628368 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick7-test-volume 
+[2023-02-17 23:39:56.628409 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick11-test-volume 
+[2023-02-17 23:39:56.628465 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick12-test-volume 
+[2023-02-17 23:39:56.628507 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick13-test-volume 
+[2023-02-17 23:39:56.628550 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick14-test-volume 
+[2023-02-17 23:39:56.628591 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick15-test-volume 
+[2023-02-17 23:39:56.628632 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume shd/test-volume 
+[2023-02-17 23:39:56.635572 +0000] I [run.c:259:runner_log] (-->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0xc8e28) [0x7f9df43bce28] -->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0x11e4ec) [0x7f9df44124ec] -->/lib/x86_64-linux-gnu/libglusterfs.so.0(runner_log+0x110) [0x7f9df90fa010] ) 0-management: Ran script: /var/lib/glusterd/hooks/1/set/post/S30samba-set.sh --volname=test-volume -o performance.client-io-threads=on --gd-workdir=/var/lib/glusterd 
+[2023-02-17 23:39:56.639383 +0000] I [run.c:259:runner_log] (-->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0xc8e28) [0x7f9df43bce28] -->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0x11e4ec) [0x7f9df44124ec] -->/lib/x86_64-linux-gnu/libglusterfs.so.0(runner_log+0x110) [0x7f9df90fa010] ) 0-management: Ran script: /var/lib/glusterd/hooks/1/set/post/S32gluster_enable_shared_storage.sh --volname=test-volume -o performance.client-io-threads=on --gd-workdir=/var/lib/glusterd 
+[2023-02-17 23:39:56.839637 +0000] E [MSGID: 106061] [glusterd-op-sm.c:1112:glusterd_op_stage_set_volume] 0-management: Dict get failed [{Key=key2}, {errno=2}, {error=No such file or directory}] 
+[2023-02-17 23:39:57.497373 +0000] W [MSGID: 101095] [xlator.c:213:xlator_volopt_dynload] 0-xlator: DL open failed [{error=/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/nfs/server.so: cannot open shared object file: No such file or directory}] 
+[2023-02-17 23:39:58.491843 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: quotad already stopped 
+[2023-02-17 23:39:58.491874 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: quotad service is stopped 
+[2023-02-17 23:39:58.491943 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: bitd already stopped 
+[2023-02-17 23:39:58.491951 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: bitd service is stopped 
+[2023-02-17 23:39:58.492059 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: scrub already stopped 
+[2023-02-17 23:39:58.492069 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: scrub service is stopped 
+[2023-02-17 23:39:58.492376 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick6-test-volume 
+[2023-02-17 23:39:58.492514 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick1-test-volume 
+[2023-02-17 23:39:58.492603 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick7-test-volume 
+[2023-02-17 23:39:58.492668 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick2-test-volume 
+[2023-02-17 23:39:58.492741 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick3-test-volume 
+[2023-02-17 23:39:58.492822 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick15-test-volume 
+[2023-02-17 23:39:58.492887 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick4-test-volume 
+[2023-02-17 23:39:58.492951 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume shd/test-volume 
+[2023-02-17 23:39:58.493028 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick5-test-volume 
+[2023-02-17 23:39:58.493107 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick8-test-volume 
+[2023-02-17 23:39:58.493162 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick9-test-volume 
+[2023-02-17 23:39:58.493222 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick10-test-volume 
+[2023-02-17 23:39:58.493276 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick13-test-volume 
+[2023-02-17 23:39:58.493324 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick14-test-volume 
+[2023-02-17 23:39:58.493370 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick12-test-volume 
+[2023-02-17 23:39:58.493415 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick11-test-volume 
+[2023-02-17 23:39:58.509223 +0000] I [run.c:259:runner_log] (-->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0xc8e28) [0x7f9df43bce28] -->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0x11e4ec) [0x7f9df44124ec] -->/lib/x86_64-linux-gnu/libglusterfs.so.0(runner_log+0x110) [0x7f9df90fa010] ) 0-management: Ran script: /var/lib/glusterd/hooks/1/set/post/S30samba-set.sh --volname=test-volume -o features.cache-invalidation=on --gd-workdir=/var/lib/glusterd 
+[2023-02-17 23:39:58.512899 +0000] I [run.c:259:runner_log] (-->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0xc8e28) [0x7f9df43bce28] -->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0x11e4ec) [0x7f9df44124ec] -->/lib/x86_64-linux-gnu/libglusterfs.so.0(runner_log+0x110) [0x7f9df90fa010] ) 0-management: Ran script: /var/lib/glusterd/hooks/1/set/post/S32gluster_enable_shared_storage.sh --volname=test-volume -o features.cache-invalidation=on --gd-workdir=/var/lib/glusterd 
+[2023-02-17 23:39:58.706884 +0000] E [MSGID: 106061] [glusterd-op-sm.c:1112:glusterd_op_stage_set_volume] 0-management: Dict get failed [{Key=key2}, {errno=2}, {error=No such file or directory}] 
+[2023-02-17 23:39:59.362151 +0000] W [MSGID: 101095] [xlator.c:213:xlator_volopt_dynload] 0-xlator: DL open failed [{error=/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/nfs/server.so: cannot open shared object file: No such file or directory}] 
+[2023-02-17 23:40:00.356151 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: quotad already stopped 
+[2023-02-17 23:40:00.356176 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: quotad service is stopped 
+[2023-02-17 23:40:00.356257 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: bitd already stopped 
+[2023-02-17 23:40:00.356265 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: bitd service is stopped 
+[2023-02-17 23:40:00.356332 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: scrub already stopped 
+[2023-02-17 23:40:00.356340 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: scrub service is stopped 
+[2023-02-17 23:40:00.356436 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick1-test-volume 
+[2023-02-17 23:40:00.356535 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick5-test-volume 
+[2023-02-17 23:40:00.356587 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick2-test-volume 
+[2023-02-17 23:40:00.356653 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick3-test-volume 
+[2023-02-17 23:40:00.356715 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick6-test-volume 
+[2023-02-17 23:40:00.356763 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick4-test-volume 
+[2023-02-17 23:40:00.356824 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick7-test-volume 
+[2023-02-17 23:40:00.356872 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick8-test-volume 
+[2023-02-17 23:40:00.356930 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick10-test-volume 
+[2023-02-17 23:40:00.356966 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick9-test-volume 
+[2023-02-17 23:40:00.357016 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick11-test-volume 
+[2023-02-17 23:40:00.357052 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick12-test-volume 
+[2023-02-17 23:40:00.357093 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick15-test-volume 
+[2023-02-17 23:40:00.357136 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick13-test-volume 
+[2023-02-17 23:40:00.357187 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick14-test-volume 
+[2023-02-17 23:40:00.357232 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume shd/test-volume 
+[2023-02-17 23:40:00.371913 +0000] I [run.c:259:runner_log] (-->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0xc8e28) [0x7f9df43bce28] -->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0x11e4ec) [0x7f9df44124ec] -->/lib/x86_64-linux-gnu/libglusterfs.so.0(runner_log+0x110) [0x7f9df90fa010] ) 0-management: Ran script: /var/lib/glusterd/hooks/1/set/post/S30samba-set.sh --volname=test-volume -o features.cache-invalidation-timeout=600 --gd-workdir=/var/lib/glusterd 
+[2023-02-17 23:40:00.375434 +0000] I [run.c:259:runner_log] (-->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0xc8e28) [0x7f9df43bce28] -->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0x11e4ec) [0x7f9df44124ec] -->/lib/x86_64-linux-gnu/libglusterfs.so.0(runner_log+0x110) [0x7f9df90fa010] ) 0-management: Ran script: /var/lib/glusterd/hooks/1/set/post/S32gluster_enable_shared_storage.sh --volname=test-volume -o features.cache-invalidation-timeout=600 --gd-workdir=/var/lib/glusterd 
+[2023-02-17 23:40:00.563256 +0000] E [MSGID: 106061] [glusterd-op-sm.c:1112:glusterd_op_stage_set_volume] 0-management: Dict get failed [{Key=key2}, {errno=2}, {error=No such file or directory}] 
+[2023-02-17 23:40:01.214585 +0000] W [MSGID: 101095] [xlator.c:213:xlator_volopt_dynload] 0-xlator: DL open failed [{error=/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/nfs/server.so: cannot open shared object file: No such file or directory}] 
+[2023-02-17 23:40:02.220473 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: quotad already stopped 
+[2023-02-17 23:40:02.220513 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: quotad service is stopped 
+[2023-02-17 23:40:02.220619 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: bitd already stopped 
+[2023-02-17 23:40:02.220633 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: bitd service is stopped 
+[2023-02-17 23:40:02.220731 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: scrub already stopped 
+[2023-02-17 23:40:02.220747 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: scrub service is stopped 
+[2023-02-17 23:40:02.221173 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick5-test-volume 
+[2023-02-17 23:40:02.221347 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick1-test-volume 
+[2023-02-17 23:40:02.221432 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick2-test-volume 
+[2023-02-17 23:40:02.221486 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick6-test-volume 
+[2023-02-17 23:40:02.221533 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick7-test-volume 
+[2023-02-17 23:40:02.221577 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick3-test-volume 
+[2023-02-17 23:40:02.221622 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick10-test-volume 
+[2023-02-17 23:40:02.221667 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick4-test-volume 
+[2023-02-17 23:40:02.221717 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick11-test-volume 
+[2023-02-17 23:40:02.221760 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick8-test-volume 
+[2023-02-17 23:40:02.221806 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick12-test-volume 
+[2023-02-17 23:40:02.221883 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick9-test-volume 
+[2023-02-17 23:40:02.221947 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick15-test-volume 
+[2023-02-17 23:40:02.222013 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume shd/test-volume 
+[2023-02-17 23:40:02.222098 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick13-test-volume 
+[2023-02-17 23:40:02.222173 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick14-test-volume 
+[2023-02-17 23:40:02.230870 +0000] I [run.c:259:runner_log] (-->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0xc8e28) [0x7f9df43bce28] -->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0x11e4ec) [0x7f9df44124ec] -->/lib/x86_64-linux-gnu/libglusterfs.so.0(runner_log+0x110) [0x7f9df90fa010] ) 0-management: Ran script: /var/lib/glusterd/hooks/1/set/post/S30samba-set.sh --volname=test-volume -o performance.stat-prefetch=on --gd-workdir=/var/lib/glusterd 
+[2023-02-17 23:40:02.235268 +0000] I [run.c:259:runner_log] (-->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0xc8e28) [0x7f9df43bce28] -->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0x11e4ec) [0x7f9df44124ec] -->/lib/x86_64-linux-gnu/libglusterfs.so.0(runner_log+0x110) [0x7f9df90fa010] ) 0-management: Ran script: /var/lib/glusterd/hooks/1/set/post/S32gluster_enable_shared_storage.sh --volname=test-volume -o performance.stat-prefetch=on --gd-workdir=/var/lib/glusterd 
+[2023-02-17 23:40:02.413435 +0000] E [MSGID: 106061] [glusterd-op-sm.c:1112:glusterd_op_stage_set_volume] 0-management: Dict get failed [{Key=key2}, {errno=2}, {error=No such file or directory}] 
+[2023-02-17 23:40:03.086456 +0000] W [MSGID: 101095] [xlator.c:213:xlator_volopt_dynload] 0-xlator: DL open failed [{error=/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/nfs/server.so: cannot open shared object file: No such file or directory}] 
+[2023-02-17 23:40:04.077952 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: quotad already stopped 
+[2023-02-17 23:40:04.077981 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: quotad service is stopped 
+[2023-02-17 23:40:04.078066 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: bitd already stopped 
+[2023-02-17 23:40:04.078075 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: bitd service is stopped 
+[2023-02-17 23:40:04.078152 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: scrub already stopped 
+[2023-02-17 23:40:04.078160 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: scrub service is stopped 
+[2023-02-17 23:40:04.078258 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick1-test-volume 
+[2023-02-17 23:40:04.078368 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick5-test-volume 
+[2023-02-17 23:40:04.078478 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick2-test-volume 
+[2023-02-17 23:40:04.078542 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick6-test-volume 
+[2023-02-17 23:40:04.078655 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick3-test-volume 
+[2023-02-17 23:40:04.078711 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick7-test-volume 
+[2023-02-17 23:40:04.078758 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick4-test-volume 
+[2023-02-17 23:40:04.078803 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick12-test-volume 
+[2023-02-17 23:40:04.078852 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick8-test-volume 
+[2023-02-17 23:40:04.078899 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick15-test-volume 
+[2023-02-17 23:40:04.078944 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick9-test-volume 
+[2023-02-17 23:40:04.078998 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume shd/test-volume 
+[2023-02-17 23:40:04.079058 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick10-test-volume 
+[2023-02-17 23:40:04.079109 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick11-test-volume 
+[2023-02-17 23:40:04.079156 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick13-test-volume 
+[2023-02-17 23:40:04.079200 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick14-test-volume 
+[2023-02-17 23:40:04.086936 +0000] I [run.c:259:runner_log] (-->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0xc8e28) [0x7f9df43bce28] -->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0x11e4ec) [0x7f9df44124ec] -->/lib/x86_64-linux-gnu/libglusterfs.so.0(runner_log+0x110) [0x7f9df90fa010] ) 0-management: Ran script: /var/lib/glusterd/hooks/1/set/post/S30samba-set.sh --volname=test-volume -o performance.cache-invalidation=on --gd-workdir=/var/lib/glusterd 
+[2023-02-17 23:40:04.091281 +0000] I [run.c:259:runner_log] (-->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0xc8e28) [0x7f9df43bce28] -->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0x11e4ec) [0x7f9df44124ec] -->/lib/x86_64-linux-gnu/libglusterfs.so.0(runner_log+0x110) [0x7f9df90fa010] ) 0-management: Ran script: /var/lib/glusterd/hooks/1/set/post/S32gluster_enable_shared_storage.sh --volname=test-volume -o performance.cache-invalidation=on --gd-workdir=/var/lib/glusterd 
+[2023-02-17 23:40:04.290400 +0000] E [MSGID: 106061] [glusterd-op-sm.c:1112:glusterd_op_stage_set_volume] 0-management: Dict get failed [{Key=key2}, {errno=2}, {error=No such file or directory}] 
+[2023-02-17 23:40:05.150973 +0000] W [MSGID: 101095] [xlator.c:213:xlator_volopt_dynload] 0-xlator: DL open failed [{error=/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/nfs/server.so: cannot open shared object file: No such file or directory}] 
+[2023-02-17 23:40:06.464768 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: quotad already stopped 
+[2023-02-17 23:40:06.464798 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: quotad service is stopped 
+[2023-02-17 23:40:06.464895 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: bitd already stopped 
+[2023-02-17 23:40:06.464904 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: bitd service is stopped 
+[2023-02-17 23:40:06.465013 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: scrub already stopped 
+[2023-02-17 23:40:06.465027 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: scrub service is stopped 
+[2023-02-17 23:40:06.465439 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick5-test-volume 
+[2023-02-17 23:40:06.465580 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick2-test-volume 
+[2023-02-17 23:40:06.465681 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick6-test-volume 
+[2023-02-17 23:40:06.465778 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick3-test-volume 
+[2023-02-17 23:40:06.465913 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick7-test-volume 
+[2023-02-17 23:40:06.466015 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick4-test-volume 
+[2023-02-17 23:40:06.466073 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick12-test-volume 
+[2023-02-17 23:40:06.466145 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick8-test-volume 
+[2023-02-17 23:40:06.466256 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick15-test-volume 
+[2023-02-17 23:40:06.466344 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick9-test-volume 
+[2023-02-17 23:40:06.466407 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume shd/test-volume 
+[2023-02-17 23:40:06.466482 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick10-test-volume 
+[2023-02-17 23:40:06.466546 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick11-test-volume 
+[2023-02-17 23:40:06.466594 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick13-test-volume 
+[2023-02-17 23:40:06.466673 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick14-test-volume 
+[2023-02-17 23:40:06.466723 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick1-test-volume 
+[2023-02-17 23:40:06.475898 +0000] I [run.c:259:runner_log] (-->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0xc8e28) [0x7f9df43bce28] -->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0x11e4ec) [0x7f9df44124ec] -->/lib/x86_64-linux-gnu/libglusterfs.so.0(runner_log+0x110) [0x7f9df90fa010] ) 0-management: Ran script: /var/lib/glusterd/hooks/1/set/post/S30samba-set.sh --volname=test-volume -o performance.md-cache-timeout=600 --gd-workdir=/var/lib/glusterd 
+[2023-02-17 23:40:06.479988 +0000] I [run.c:259:runner_log] (-->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0xc8e28) [0x7f9df43bce28] -->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0x11e4ec) [0x7f9df44124ec] -->/lib/x86_64-linux-gnu/libglusterfs.so.0(runner_log+0x110) [0x7f9df90fa010] ) 0-management: Ran script: /var/lib/glusterd/hooks/1/set/post/S32gluster_enable_shared_storage.sh --volname=test-volume -o performance.md-cache-timeout=600 --gd-workdir=/var/lib/glusterd 
+[2023-02-17 23:40:06.686600 +0000] E [MSGID: 106061] [glusterd-op-sm.c:1112:glusterd_op_stage_set_volume] 0-management: Dict get failed [{Key=key2}, {errno=2}, {error=No such file or directory}] 
+[2023-02-17 23:40:07.168625 +0000] W [MSGID: 101095] [xlator.c:213:xlator_volopt_dynload] 0-xlator: DL open failed [{error=/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/nfs/server.so: cannot open shared object file: No such file or directory}] 
+[2023-02-17 23:40:07.667369 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: quotad already stopped 
+[2023-02-17 23:40:07.667394 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: quotad service is stopped 
+[2023-02-17 23:40:07.667488 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: bitd already stopped 
+[2023-02-17 23:40:07.667496 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: bitd service is stopped 
+[2023-02-17 23:40:07.667583 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: scrub already stopped 
+[2023-02-17 23:40:07.667591 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: scrub service is stopped 
+[2023-02-17 23:40:07.667707 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick1-test-volume 
+[2023-02-17 23:40:07.667817 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick7-test-volume 
+[2023-02-17 23:40:07.667900 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick2-test-volume 
+[2023-02-17 23:40:07.667986 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick12-test-volume 
+[2023-02-17 23:40:07.668462 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick3-test-volume 
+[2023-02-17 23:40:07.668568 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick15-test-volume 
+[2023-02-17 23:40:07.668657 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick4-test-volume 
+[2023-02-17 23:40:07.668733 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume shd/test-volume 
+[2023-02-17 23:40:07.668813 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick5-test-volume 
+[2023-02-17 23:40:07.668907 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick6-test-volume 
+[2023-02-17 23:40:07.668978 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick8-test-volume 
+[2023-02-17 23:40:07.669066 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick11-test-volume 
+[2023-02-17 23:40:07.669131 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick9-test-volume 
+[2023-02-17 23:40:07.669213 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick10-test-volume 
+[2023-02-17 23:40:07.669276 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick13-test-volume 
+[2023-02-17 23:40:07.669357 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick14-test-volume 
+[2023-02-17 23:40:07.676729 +0000] I [run.c:259:runner_log] (-->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0xc8e28) [0x7f9df43bce28] -->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0x11e4ec) [0x7f9df44124ec] -->/lib/x86_64-linux-gnu/libglusterfs.so.0(runner_log+0x110) [0x7f9df90fa010] ) 0-management: Ran script: /var/lib/glusterd/hooks/1/set/post/S30samba-set.sh --volname=test-volume -o performance.readdir-ahead=on --gd-workdir=/var/lib/glusterd 
+[2023-02-17 23:40:07.679672 +0000] I [run.c:259:runner_log] (-->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0xc8e28) [0x7f9df43bce28] -->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0x11e4ec) [0x7f9df44124ec] -->/lib/x86_64-linux-gnu/libglusterfs.so.0(runner_log+0x110) [0x7f9df90fa010] ) 0-management: Ran script: /var/lib/glusterd/hooks/1/set/post/S32gluster_enable_shared_storage.sh --volname=test-volume -o performance.readdir-ahead=on --gd-workdir=/var/lib/glusterd 
+[2023-02-17 23:40:07.889667 +0000] E [MSGID: 106061] [glusterd-op-sm.c:1112:glusterd_op_stage_set_volume] 0-management: Dict get failed [{Key=key2}, {errno=2}, {error=No such file or directory}] 
+[2023-02-17 23:40:08.374214 +0000] W [MSGID: 101095] [xlator.c:213:xlator_volopt_dynload] 0-xlator: DL open failed [{error=/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/nfs/server.so: cannot open shared object file: No such file or directory}] 
+[2023-02-17 23:40:08.867576 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: quotad already stopped 
+[2023-02-17 23:40:08.867601 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: quotad service is stopped 
+[2023-02-17 23:40:08.867700 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: bitd already stopped 
+[2023-02-17 23:40:08.867708 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: bitd service is stopped 
+[2023-02-17 23:40:08.867799 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: scrub already stopped 
+[2023-02-17 23:40:08.867807 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: scrub service is stopped 
+[2023-02-17 23:40:08.867907 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick1-test-volume 
+[2023-02-17 23:40:08.867999 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick2-test-volume 
+[2023-02-17 23:40:08.868299 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick7-test-volume 
+[2023-02-17 23:40:08.868358 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick3-test-volume 
+[2023-02-17 23:40:08.868421 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick4-test-volume 
+[2023-02-17 23:40:08.868477 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick10-test-volume 
+[2023-02-17 23:40:08.868517 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick5-test-volume 
+[2023-02-17 23:40:08.868568 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick11-test-volume 
+[2023-02-17 23:40:08.868618 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick6-test-volume 
+[2023-02-17 23:40:08.868659 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick12-test-volume 
+[2023-02-17 23:40:08.868712 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick8-test-volume 
+[2023-02-17 23:40:08.868751 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick9-test-volume 
+[2023-02-17 23:40:08.868803 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick14-test-volume 
+[2023-02-17 23:40:08.868844 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick13-test-volume 
+[2023-02-17 23:40:08.868893 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick15-test-volume 
+[2023-02-17 23:40:08.868931 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume shd/test-volume 
+[2023-02-17 23:40:08.875537 +0000] I [run.c:259:runner_log] (-->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0xc8e28) [0x7f9df43bce28] -->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0x11e4ec) [0x7f9df44124ec] -->/lib/x86_64-linux-gnu/libglusterfs.so.0(runner_log+0x110) [0x7f9df90fa010] ) 0-management: Ran script: /var/lib/glusterd/hooks/1/set/post/S30samba-set.sh --volname=test-volume -o performance.parallel-readdir=on --gd-workdir=/var/lib/glusterd 
+[2023-02-17 23:40:08.879557 +0000] I [run.c:259:runner_log] (-->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0xc8e28) [0x7f9df43bce28] -->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0x11e4ec) [0x7f9df44124ec] -->/lib/x86_64-linux-gnu/libglusterfs.so.0(runner_log+0x110) [0x7f9df90fa010] ) 0-management: Ran script: /var/lib/glusterd/hooks/1/set/post/S32gluster_enable_shared_storage.sh --volname=test-volume -o performance.parallel-readdir=on --gd-workdir=/var/lib/glusterd 
+[2023-02-17 23:40:09.094919 +0000] E [MSGID: 106061] [glusterd-op-sm.c:1112:glusterd_op_stage_set_volume] 0-management: Dict get failed [{Key=key2}, {errno=2}, {error=No such file or directory}] 
+[2023-02-17 23:40:09.584449 +0000] W [MSGID: 101095] [xlator.c:213:xlator_volopt_dynload] 0-xlator: DL open failed [{error=/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/nfs/server.so: cannot open shared object file: No such file or directory}] 
+[2023-02-17 23:40:10.069266 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: quotad already stopped 
+[2023-02-17 23:40:10.069306 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: quotad service is stopped 
+[2023-02-17 23:40:10.069545 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: bitd already stopped 
+[2023-02-17 23:40:10.069567 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: bitd service is stopped 
+[2023-02-17 23:40:10.069706 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: scrub already stopped 
+[2023-02-17 23:40:10.069720 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: scrub service is stopped 
+[2023-02-17 23:40:10.069861 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick1-test-volume 
+[2023-02-17 23:40:10.070001 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick7-test-volume 
+[2023-02-17 23:40:10.070086 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick2-test-volume 
+[2023-02-17 23:40:10.070219 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick3-test-volume 
+[2023-02-17 23:40:10.070309 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick10-test-volume 
+[2023-02-17 23:40:10.070382 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick4-test-volume 
+[2023-02-17 23:40:10.070464 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick11-test-volume 
+[2023-02-17 23:40:10.070522 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick5-test-volume 
+[2023-02-17 23:40:10.070604 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick12-test-volume 
+[2023-02-17 23:40:10.070663 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick6-test-volume 
+[2023-02-17 23:40:10.070826 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick14-test-volume 
+[2023-02-17 23:40:10.070891 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick8-test-volume 
+[2023-02-17 23:40:10.070955 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick15-test-volume 
+[2023-02-17 23:40:10.071020 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick9-test-volume 
+[2023-02-17 23:40:10.071085 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick13-test-volume 
+[2023-02-17 23:40:10.071151 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume shd/test-volume 
+[2023-02-17 23:40:10.085393 +0000] I [run.c:259:runner_log] (-->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0xc8e28) [0x7f9df43bce28] -->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0x11e4ec) [0x7f9df44124ec] -->/lib/x86_64-linux-gnu/libglusterfs.so.0(runner_log+0x110) [0x7f9df90fa010] ) 0-management: Ran script: /var/lib/glusterd/hooks/1/set/post/S30samba-set.sh --volname=test-volume -o storage.owner-uid=1000 --gd-workdir=/var/lib/glusterd 
+[2023-02-17 23:40:10.088727 +0000] I [run.c:259:runner_log] (-->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0xc8e28) [0x7f9df43bce28] -->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0x11e4ec) [0x7f9df44124ec] -->/lib/x86_64-linux-gnu/libglusterfs.so.0(runner_log+0x110) [0x7f9df90fa010] ) 0-management: Ran script: /var/lib/glusterd/hooks/1/set/post/S32gluster_enable_shared_storage.sh --volname=test-volume -o storage.owner-uid=1000 --gd-workdir=/var/lib/glusterd 
+[2023-02-17 23:40:10.306643 +0000] E [MSGID: 106061] [glusterd-op-sm.c:1112:glusterd_op_stage_set_volume] 0-management: Dict get failed [{Key=key2}, {errno=2}, {error=No such file or directory}] 
+[2023-02-17 23:40:10.786996 +0000] W [MSGID: 101095] [xlator.c:213:xlator_volopt_dynload] 0-xlator: DL open failed [{error=/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/nfs/server.so: cannot open shared object file: No such file or directory}] 
+[2023-02-17 23:40:11.297164 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: quotad already stopped 
+[2023-02-17 23:40:11.297191 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: quotad service is stopped 
+[2023-02-17 23:40:11.297305 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: bitd already stopped 
+[2023-02-17 23:40:11.297313 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: bitd service is stopped 
+[2023-02-17 23:40:11.297417 +0000] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: scrub already stopped 
+[2023-02-17 23:40:11.297425 +0000] I [MSGID: 106568] [glusterd-svc-mgmt.c:265:glusterd_svc_stop] 0-management: scrub service is stopped 
+[2023-02-17 23:40:11.297530 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick1-test-volume 
+[2023-02-17 23:40:11.297646 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick7-test-volume 
+[2023-02-17 23:40:11.297737 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick2-test-volume 
+[2023-02-17 23:40:11.297811 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick10-test-volume 
+[2023-02-17 23:40:11.297860 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick11-test-volume 
+[2023-02-17 23:40:11.297893 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick3-test-volume 
+[2023-02-17 23:40:11.297950 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick12-test-volume 
+[2023-02-17 23:40:11.297983 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick4-test-volume 
+[2023-02-17 23:40:11.298042 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick14-test-volume 
+[2023-02-17 23:40:11.298075 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick5-test-volume 
+[2023-02-17 23:40:11.298130 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick15-test-volume 
+[2023-02-17 23:40:11.298171 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick6-test-volume 
+[2023-02-17 23:40:11.298224 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume shd/test-volume 
+[2023-02-17 23:40:11.298273 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick8-test-volume 
+[2023-02-17 23:40:11.298330 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick9-test-volume 
+[2023-02-17 23:40:11.298371 +0000] I [MSGID: 106496] [glusterd-handshake.c:954:__server_getspec] 0-management: Received mount request for volume test-volume.gluster-server-3.gluster-brick13-test-volume 
+[2023-02-17 23:40:11.313347 +0000] I [run.c:259:runner_log] (-->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0xc8e28) [0x7f9df43bce28] -->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0x11e4ec) [0x7f9df44124ec] -->/lib/x86_64-linux-gnu/libglusterfs.so.0(runner_log+0x110) [0x7f9df90fa010] ) 0-management: Ran script: /var/lib/glusterd/hooks/1/set/post/S30samba-set.sh --volname=test-volume -o storage.owner-gid=1000 --gd-workdir=/var/lib/glusterd 
+[2023-02-17 23:40:11.316334 +0000] I [run.c:259:runner_log] (-->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0xc8e28) [0x7f9df43bce28] -->/usr/lib/x86_64-linux-gnu/glusterfs/10.1/xlator/mgmt/glusterd.so(+0x11e4ec) [0x7f9df44124ec] -->/lib/x86_64-linux-gnu/libglusterfs.so.0(runner_log+0x110) [0x7f9df90fa010] ) 0-management: Ran script: /var/lib/glusterd/hooks/1/set/post/S32gluster_enable_shared_storage.sh --volname=test-volume -o storage.owner-gid=1000 --gd-workdir=/var/lib/glusterd 
