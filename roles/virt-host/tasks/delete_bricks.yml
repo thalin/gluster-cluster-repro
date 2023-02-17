@@ -1,0 +1,7 @@
+- name: Detach volumes for {{ gluster_host }}
+  shell: virsh detach-disk {{ gluster_host }} vd{{ item }}
+  loop: "{{ 'cdefghijklmnopq' | list }}"
+
+- name: "Delete bricks for {{ gluster_host }}"
+  shell: "virsh vol-delete {{ gluster_host }}-brick-{{ item }} --pool {{ storage_pool }}"
+  loop: "{{ range(1, 16)|list }}"

@@ -1,0 +1,6 @@
+- name: Set up hosts file
+  lineinfile:
+    path: /etc/hosts
+    line: "{{ hostvars[item]['ansible_host'] }} {{ item }}"
+  loop: "{{ groups['gluster'] }}"
+  become: true

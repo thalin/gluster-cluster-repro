@@ -1,0 +1,36 @@
+- name: Get storage pool location
+  shell: "virsh pool-dumpxml {{ storage_pool }} | grep path | sed -e 's#\\s\\+<path>\\(\\S\\+\\)</path>#\\1#'"
+  register: pool_path
+
+#- name: Ensure gluster disk dir exists
+#  file:
+#    state: directory
+#    path: "{{ pool_path.stdout }}"
+#  become: true
+#
+#- name: Create qcow2 image to clone for disks
+#  shell:
+#    cmd: qemu-img create -f qcow2 gluster-brick-1G 1G
+#    creates: "{{ pool_path.stdout }}/gluster-brick-1G"
+#    chdir: "{{ pool_path.stdout }}"
+#  become: true
+
+#- name: Zero out qcow image
+#  shell:
+#    cmd: dd if=/dev/zero of={{ pool_path.stdout }}/gluster-brick-2g bs=1M count=2048
+#    chdir: "{{ pool_path.stdout }}"
+#  become: true
+
+- name: Generate gluster storage bricks
+  include_tasks: create_bricks.yml
+  loop: "{{ groups['gluster_servers'] }}"
+  loop_control:
+    loop_var: gluster_host
+  when: clean_up is not defined 
+
+- name: Delete gluster storage bricks
+  include_tasks: delete_bricks.yml
+  loop: "{{ groups['gluster_servers'] }}"
+  loop_control:
+    loop_var: gluster_host
+  when: clean_up is defined

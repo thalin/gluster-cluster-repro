@@ -1,0 +1,68 @@
+- name: Partition bricks
+  parted:
+    device: /dev/vd{{ item }}
+    state: present
+    number: 1
+  loop: "{{ 'cdefghijklmnopq' | list }}"
+  when: clean_up is not defined
+  become: true
+
+- name: Format bricks
+  filesystem:
+    fstype: xfs
+    dev: /dev/vd{{ item }}1
+    opts: -i size=512
+  loop: "{{ 'cdefghijklmnopq' | list }}"
+  when: clean_up is not defined
+  become: true
+
+- name: Create brick dirs
+  file:
+    state: directory
+    path: /gluster/brick{{ item }}
+  loop: "{{ range(1, 16) | list }}"
+  become: true
+  when: clean_up is not defined
+
+- name: Mount bricks
+  mount:
+    path: /gluster/brick{{ item.0 }}
+    src: /dev/vd{{ item.1 }}1
+    fstype: xfs
+    opts: relatime
+    state: mounted
+  loop: "{{ range(1, 16)| zip('cdefghijklmnopq') | list }}" 
+  when: clean_up is not defined
+  become: true
+
+- name: Create gluster volume dirs
+  file:
+    state: directory
+    path: /gluster/brick{{ item }}/{{ gluster_volume }}
+  loop: "{{ range(1, 16) | list }}"
+  become: true
+  when: clean_up is not defined
+
+- name: Unount bricks
+  mount:
+    path: /gluster/brick{{ item.0 }}
+    src: /dev/vd{{ item.1 }}1
+    fstype: xfs
+    opts: relatime
+    state: absent
+  loop: "{{ range(1, 16)| zip('cdefghijklmnopq') | list }}" 
+  when: clean_up is defined
+  become: true
+
+- name: Install glusterfs-server
+  apt:
+    name: glusterfs-server
+  when: clean_up is not defined
+  become: true
+
+- name: Start glusterd
+  service:
+    name: glusterd
+    state: started
+  when: clean_up is not defined
+  become: true

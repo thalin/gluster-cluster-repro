@@ -1,0 +1,72 @@
+---
+
+- name: Virt gluster_servers setup
+  hosts: gluster_servers 
+  vars:
+    gluster_volume: test-volume
+  roles: 
+    - gluster-server
+
+- name: Gluster common setup
+  hosts: gluster 
+  roles: 
+    - gluster-common
+
+# This can probably just be done with the gluster module but oh well
+- name: Gluster peer probes
+  hosts: gluster_servers_main
+  tasks:
+    - shell:
+        cmd: "gluster peer probe {{ item }}"
+      become: true
+      loop: "{{ groups['gluster_servers_other'] }}"
+
+- name: Gluster peer probes 2
+  hosts: gluster_servers_other
+  tasks:
+    - shell:
+        cmd: "gluster peer probe {{ item }}"
+      become: true
+      loop: "{{ groups['gluster_servers_main'] }}"
+
+- name: Gluster create volume
+  hosts: gluster_servers_main
+  vars:
+    gluster_volume: test-volume
+  tasks:
+    - name: Create {{ gluster_volume }}
+      gluster_volume:
+        name: "{{ gluster_volume }}"
+        state: present
+        cluster: "{{ groups['gluster_servers'] | list }}"
+        bricks: "{% for i in range(1, 16) %}/gluster/brick{{ i }}/{{ gluster_volume }}{% if not loop.last %},{% endif %}{% endfor %}"
+        disperses: 3
+      become: true
+      run_once: true
+    - name: Configure {{ gluster_volume }}
+      gluster_volume:
+        name: "{{ gluster_volume }}"
+        state: present
+        options:
+          cluster.rebal-throttle: "lazy"
+          storage.fips-mode-rchecksum: "on"
+          performance.client-io-threads: "on"
+          features.cache-invalidation: "on"
+          features.cache-invalidation-timeout: "600"
+          performance.stat-prefetch: "on"
+          performance.cache-invalidation: "on"
+          performance.md-cache-timeout: "600"
+          #network.inode-lru-limit: 200000
+          performance.readdir-ahead: "on"
+          performance.parallel-readdir: "on"
+          storage.owner-uid: "1000"
+          storage.owner-gid: "1000"
+      run_once: true
+      become: true
+
+- name: Configure client
+  hosts: gluster_clients
+  vars:
+    gluster_volume: test-volume
+  roles:
+    - gluster-client

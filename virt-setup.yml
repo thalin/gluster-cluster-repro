@@ -1,0 +1,7 @@
+---
+
+- name: Virt gluster setup
+  hosts: virt_servers
+  connection: local
+  roles: 
+    - virt-host

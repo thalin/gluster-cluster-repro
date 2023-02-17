@@ -1,0 +1,28 @@
+---
+
+- name: Unconfigure client
+  hosts: gluster_clients
+  vars:
+    gluster_volume: test-volume
+    clean_up: true
+  roles:
+    - gluster-client
+
+- name: Remove gluster volume
+  hosts: gluster_servers_main
+  vars:
+    gluster_volume: test-volume
+  tasks:
+    - name: Create {{ gluster_volume }}
+      gluster_volume:
+        name: "{{ gluster_volume }}"
+        state: absent
+      become: true
+
+- name: Unconfigure gluster_servers
+  hosts: gluster_servers
+  vars:
+    gluster_volume: test-volume
+    clean_up: true
+  roles:
+    - gluster-server

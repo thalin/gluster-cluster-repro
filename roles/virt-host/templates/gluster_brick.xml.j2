@@ -1,0 +1,8 @@
+<volume>
+  <name>{{ gluster_host }}-brick-{{ item }}</name>
+  <capacity unit="G">2</capacity>
+  <allocation unit="G">2</allocation>
+  <target>
+    <format type='qcow2'/>
+  </target>
+</volume>

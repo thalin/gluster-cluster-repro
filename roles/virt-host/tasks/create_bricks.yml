@@ -1,0 +1,35 @@
+#- name: Clone qcow image for each gluster host
+#  shell:
+#    cmd: cp {{ pool_path.stdout }}/gluster-brick-1G {{ pool_path.stdout }}/{{ gluster_host }}-brick-{{ item }}
+#    chdir: "{{ pool_path.stdout }}"
+#  loop: "{{ range(1, 16)|list }}"
+#  become: true
+
+
+- name: Create tempdir for xml files
+  ansible.builtin.tempfile:
+    state: directory
+  register: brick_tempdir
+
+- name: Create brick xml files for {{ gluster_host }}
+  ansible.builtin.template:
+    src: gluster_brick.xml.j2
+    dest: "{{ brick_tempdir.path }}/gluster_brick_{{ gluster_host }}_{{ item }}.xml"
+    owner: thalin
+    group: thalin
+    #    msg: "outer item={{ gluster_host }} inner item={{ item }}"
+  loop: "{{ range(1, 16)|list }}"
+  register: xml_files
+
+- name: Create virt storage brick volumes for {{ gluster_host }}
+  shell: virsh vol-create --pool {{ storage_pool }} --file {{ item.dest }}
+  loop: "{{ xml_files.results }}"
+
+- name: Clean up tempdir
+  ansible.builtin.file:
+    state: absent
+    path: "{{ brick_tempdir.path }}"
+
+- name: Attach virt storage brick volumes for {{ gluster_host }}
+  shell: virsh attach-disk {{ gluster_host }} {{ pool_path.stdout }}/{{ gluster_host }}-brick-{{ item.0 }} vd{{ item.1 }} --subdriver qcow2
+  loop: "{{ range(1, 16)| zip('cdefghijklmnopq') | list }}"

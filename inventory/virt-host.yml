@@ -1,0 +1,7 @@
+virt_servers:
+  hosts:
+    localhost:
+      connection: local
+      ansible_host: 127.0.0.1
+      ansible_user: thalin
+      storage_pool: default

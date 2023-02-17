@@ -1,0 +1,39 @@
+- name: gluster-server-1
+  distro: ubuntu-22.04
+  root_disk_size: 20
+  vcpus: 2
+  memory: 8192
+  root_password: ansible
+  groups:
+    - gluster_servers
+    - gluster_servers_main
+    - gluster
+- name: gluster-server-2
+  distro: ubuntu-22.04
+  root_disk_size: 20
+  vcpus: 2
+  memory: 8192
+  root_password: ansible
+  groups:
+    - gluster_servers
+    - gluster_servers_other
+    - gluster
+- name: gluster-server-3
+  distro: ubuntu-22.04
+  root_disk_size: 20
+  vcpus: 2
+  memory: 8192
+  root_password: ansible
+  groups:
+    - gluster_servers
+    - gluster_servers_other
+    - gluster
+- name: gluster-client-1
+  distro: ubuntu-22.04
+  root_disk_size: 20
+  vcpus: 2
+  memory: 2048
+  root_password: ansible
+  groups:
+    - gluster_clients
+    - gluster

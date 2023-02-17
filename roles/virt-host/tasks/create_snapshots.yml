@@ -1,0 +1,13 @@
+- name: "Check for pre-ansible snapshot for {{ gluster_host }}"
+  shell: "virsh snapshot-list {{ gluster_host }} --name |grep pre-ansible"
+  register: snapshot
+  ignore_errors: true
+
+- name: "Create pre-ansible snapshot for {{ gluster_host }}"
+  shell: "virsh snapshot-create-as {{ gluster_host }} --name pre-ansible"
+  when: snapshot is failed
+
+#- name: "Create pre-ansible snapshot for {{ gluster_host }}"
+  #  ansible.builtin.debug:
+  #    msg: "{{ snapshot }}"
+  #  when: snapshot is failed

@@ -1,0 +1,28 @@
+- name: Install glusterfs-client
+  apt:
+    name: glusterfs-client
+    state: present
+  become: true
+
+- name: Make {{ gluster_volume }} mountpoint
+  file:
+    state: directory
+    path: /mnt/{{ gluster_volume }}
+  become: true
+
+- name: Mount {{ gluster_volume }}
+  mount:
+    path: /mnt/{{ gluster_volume }}
+    boot: no
+    fstype: glusterfs
+    state: mounted
+    src: "{{ groups['gluster_servers_main'] | first }}:/{{ gluster_volume }}"
+  become: true
+  when: clean_up is not defined
+
+- name: Unmount {{ gluster_volume }}
+  mount:
+    path: /mnt/{{ gluster_volume }}
+    state: unmounted
+  become: true
+  when: clean_up is defined
